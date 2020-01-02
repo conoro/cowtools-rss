@@ -24,21 +24,21 @@ module.exports.check = (event, context, callback) => {
     ttl: "60"
   });
 
-  request(URL, function(error, response, html) {
+  request(URL, function (error, response, html) {
     if (!error && response.statusCode == 200) {
       var $ = cheerio.load(html);
       $(".tfs-comic__body").each(function () {
         var link = $(this).find("img").attr("data-src");
-          var title = $(this).find("figcaption").text();
-          var currentDate = new Date();
-          var description = '<img src="' + link +'" alt="' + title +'" />';
-          feed.item({
-            title: title,
-            description: description,
-            url: link,
-            author: "Gary Larson",
-            date: currentDate
-          });
+        var title = $(this).find("figcaption").text();
+        var currentDate = new Date();
+        var description = '<img src="' + link + '" alt="' + title + '" />';
+        feed.item({
+          title: title,
+          description: description,
+          url: link,
+          author: "Gary Larson",
+          date: currentDate
+        });
       });
       var xml = feed.xml();
       context.succeed(xml);
