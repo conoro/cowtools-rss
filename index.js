@@ -1,6 +1,6 @@
 // Cowtools RSS - Copyright Conor O'Neill 2020, conor@conoroneill.com
 // LICENSE Apache-2.0
-// Invoke like https://url.of.serverless.function/dev/rss?page=https://www.eveningecho.ie/corknews or https://url.of.serverless.function/dev/rss?page=https://www.eveningecho.ie/nationalnews or https://url.of.serverless.function/dev/rss?page=https://www.eveningecho.ie/business
+// Invoke like https://url.of.serverless.function/dev/rss
 
 module.exports.check = (event, context, callback) => {
   var request = require("request");
@@ -31,9 +31,10 @@ module.exports.check = (event, context, callback) => {
         var link = $(this).find("img").attr("data-src");
           var title = $(this).find("figcaption").text();
           var currentDate = new Date();
+          var description = '<img src="' + link +'" alt="' + title +'" />';
           feed.item({
             title: title,
-            description: title,
+            description: description,
             url: link,
             author: "Gary Larson",
             date: currentDate
