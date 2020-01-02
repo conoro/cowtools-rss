@@ -29,7 +29,7 @@ module.exports.check = (event, context, callback) => {
       var $ = cheerio.load(html);
       $(".tfs-comic__body").each(function () {
         var link = $(this).find("img").attr("data-src");
-        var title = $(this).find("figcaption").text();
+        var title = $(this).find("figcaption").text() || "No caption";
         var currentDate = new Date();
         var description = '<img src="' + link + '" alt="' + title + '" />';
         feed.item({
