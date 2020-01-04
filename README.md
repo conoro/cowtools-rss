@@ -6,7 +6,7 @@ This Serverless function provides an RSS feed for the new The Far Side website.
 * Install Node.js 12+
 
 ```bash
-git clone git@github.com:conoro/cowtools-echo-rss.git
+git clone git@github.com:conoro/cowtools-rss.git
 cd cowtools-rss
 npm install -g serverless
 npm install
