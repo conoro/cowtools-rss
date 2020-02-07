@@ -7,6 +7,7 @@ module.exports.check = (event, context, callback) => {
   var cheerio = require("cheerio");
   var RSS = require("rss");
   var URL = "https://www.thefarside.com";
+  var url = require('url');
 
   var feed = new RSS({
     title: "Cowtools RSS",
@@ -29,6 +30,8 @@ module.exports.check = (event, context, callback) => {
       var $ = cheerio.load(html);
       $(".tfs-comic").each(function () {
         var link = $(this).find("img").attr("data-src");
+        const imgURL = url.parse(link);
+        const guid = imgURL.href.replace(imgURL.search, '');
         var title = $(this).find("figcaption").text() || "No caption";
         var currentDate = new Date();
         var description = '<img src="' + link + '" alt="' + title + '" />';
@@ -36,6 +39,7 @@ module.exports.check = (event, context, callback) => {
           title: title,
           description: description,
           url: link,
+          guid: guid,
           author: "Gary Larson",
           date: currentDate
         });
