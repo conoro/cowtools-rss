@@ -27,7 +27,7 @@ module.exports.check = (event, context, callback) => {
   request(URL, function (error, response, html) {
     if (!error && response.statusCode == 200) {
       var $ = cheerio.load(html);
-      $(".tfs-comic__body").each(function () {
+      $(".tfs-comic").each(function () {
         var link = $(this).find("img").attr("data-src");
         var title = $(this).find("figcaption").text() || "No caption";
         var currentDate = new Date();
