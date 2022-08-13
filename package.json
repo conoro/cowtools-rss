@@ -19,6 +19,6 @@
     "cheerio": "^1.0.0-rc.2",
     "request": "^2.88.0",
     "rss": "^1.2.2",
-    "serverless": "^1.63.0"
+    "serverless": "^1.83.3"
   }
 }
