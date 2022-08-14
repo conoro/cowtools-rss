@@ -1,3 +1,4 @@
+secrets.dev.yml
 jwt_key.json
 .serverless
 email2hugo.env.yml

@@ -1,14 +1,34 @@
 service: cowtools-rss
 
-frameworkVersion: ">=1.1.0 <2.0.0"
+frameworkVersion: ">=2.24.0"
+
+#plugins:
+#  - serverless-secrets-plugin
+
+custom:
+  bucket: rss-image-cache
+#  secrets: ${file(secrets.${opt:stage, self:provider.stage}.yml)}
 
 provider:
   name: aws
-  runtime: nodejs12.x
-
+  runtime: nodejs16.x
+  stage: dev
+  region: eu-west-1
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - s3:PutObject
+            - s3:PutObjectAcl
+          Resource: "arn:aws:s3:::${self:custom.bucket}/*"
 functions:
   check:
-    handler: index.check
+    handler: handler.check
+    environment:
+      BUCKET: ${self:custom.bucket}
+#      AWS_ACCESS_KEY_ID: ${self:custom.secrets.AWS_ACCESS_KEY_ID}
+#      AWS_SECRET_ACCESS_KEY: ${self:custom.secrets.AWS_SECRET_ACCESS_KEY}
     events:
       - http:
           path: rss
