@@ -86,16 +86,24 @@ export function check(event, context, callback) {
       // https://rss-image-cache.s3.amazonaws.com/hang-on-betty-someones-bound-to-see-us-eventually.jpg
       let filename = slugify(feedEntries[i].title, { remove: /[*+~.,()'"!:@]/g }).toLowerCase() + ".jpg";
 
+      // Only upload image if it doesn't exist
       try {
-        const stored = await s3.upload({
+        await s3.headObject({
           Bucket: process.env.BUCKET,
-          Key: filename,
-          ACL: 'public-read',
-          Body: resBuffer
+          Key: filename
         }).promise();
-        console.log(stored);
-      } catch (err) {
-        console.log(err)
+      } catch (error) {
+        if (error.name === 'NotFound') {
+          const stored = await s3.upload({
+            Bucket: process.env.BUCKET,
+            Key: filename,
+            ACL: 'public-read',
+            Body: resBuffer
+          }).promise();
+          console.log(stored);
+        } else {
+          console.log(err);
+        }
       }
 
       feed.item({
@@ -106,7 +114,6 @@ export function check(event, context, callback) {
         author: "Gary Larson",
         date: feedEntries[i].currentDate
       });
-
 
     }
 
