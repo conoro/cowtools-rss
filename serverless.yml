@@ -32,6 +32,7 @@ provider:
 functions:
   check:
     handler: handler.check
+    description: generate RSS feed for Far Side comic strips
     environment:
       BUCKET: ${self:custom.bucket}
 #      AWS_ACCESS_KEY_ID: ${self:custom.secrets.AWS_ACCESS_KEY_ID}
