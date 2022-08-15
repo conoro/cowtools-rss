@@ -49,15 +49,22 @@ export function check(event, context, callback) {
     let body = await response.text();
     if (response.ok) {
 
+      let imagecounter = 0;
       let $ = cheerio.load(body);
       $(".tfs-comic").each(function () {
         let entry = {};
         entry.link = $(this).find("img").attr("data-src");
         entry.imgURL = url.parse(entry.link);
         entry.guid = entry.imgURL.href.replace(entry.imgURL.search, '');
-        entry.title = $(this).find("figcaption").text() || "No caption";
+        let filetimestamp = new Date().toISOString().split('T')[0];
+        entry.title = $(this).find("figcaption").text() || "No caption " + filetimestamp + "-" + imagecounter;
+        // Farside empty caption is a mix of spaces and carriage returns. Remove carriage returns first
+        entry.title = entry.title.replace(/\r?\n|\r/g, " ");
+        // Then if all spaces, set caption to some text
+        if((entry.title === null) || (entry.title.match(/^ *$/) !== null)) entry.title = "No caption " + filetimestamp + "-" + imagecounter;;
         entry.currentDate = new Date();
         feedEntries.push(entry);
+        imagecounter++;
       });
     }
 
@@ -102,7 +109,7 @@ export function check(event, context, callback) {
           }).promise();
           console.log(stored);
         } else {
-          console.log(err);
+          console.log(error);
         }
       }
 
@@ -116,11 +123,10 @@ export function check(event, context, callback) {
       });
 
     }
-
     var xml = feed.xml();
     context.succeed(xml);
   }
-
+ 
   getCowTools();
 
 }
