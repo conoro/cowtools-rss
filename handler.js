@@ -91,7 +91,7 @@ export function check(event, context, callback) {
 
 
       // https://rss-image-cache.s3.amazonaws.com/hang-on-betty-someones-bound-to-see-us-eventually.jpg
-      let filename = slugify(feedEntries[i].title, { remove: /[*+~.,()'"!:@]/g }).toLowerCase() + ".jpg";
+      let filename = slugify(feedEntries[i].title, { remove: /[*+~.,?…()'"!:@]/g }).toLowerCase() + ".jpg";
 
       // Only upload image if it doesn't exist
       try {
