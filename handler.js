@@ -91,7 +91,7 @@ export function check(event, context, callback) {
 
 
       // https://rss-image-cache.s3.amazonaws.com/hang-on-betty-someones-bound-to-see-us-eventually.jpg
-      let filename = slugify(feedEntries[i].title, { remove: /[*+~.,?…()'"!:@]/g }).toLowerCase() + ".jpg";
+      let filename = slugify(feedEntries[i].title, { remove: /[*+~.,?…()'!“”—’"!:@]/g }).toLowerCase() + ".jpg";
 
       // Only upload image if it doesn't exist
       try {
@@ -113,9 +113,12 @@ export function check(event, context, callback) {
         }
       }
 
+      let cleaned_title = feedEntries[i].title.replace(/[’]/g, '\''); 
+      cleaned_title = cleaned_title.replace(/[“”]/g, '"'); 
+      cleaned_title = cleaned_title.replace(/[*+~…—@]/g, ' '); 
       feed.item({
-        title: feedEntries[i].title,
-        description: '<img src="' + "https://" + process.env.BUCKET + ".s3.amazonaws.com/" + filename + '" alt="' + feedEntries[i].title + '" />',
+        title: cleaned_title,
+        description: '<img src="' + "https://" + process.env.BUCKET + ".s3.amazonaws.com/" + filename + '" alt="' + cleaned_title + '" /><br><br>'+cleaned_title,
         url: feedEntries[i].link,
         guid: feedEntries[i].guid,
         author: "Gary Larson",
