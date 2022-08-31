@@ -118,7 +118,7 @@ export function check(event, context, callback) {
       cleaned_title = cleaned_title.replace(/[*+~…—@]/g, ' '); 
       feed.item({
         title: cleaned_title,
-        description: '<img src="' + "https://" + process.env.BUCKET + ".s3.amazonaws.com/" + filename + '" alt="' + cleaned_title + '" /><br><br>'+cleaned_title,
+        description: '<p style="text-align:center"><img src="' + "https://" + process.env.BUCKET + ".s3.amazonaws.com/" + filename + '" alt="' + cleaned_title + '" /><br><br>'+cleaned_title + '</p>',
         url: feedEntries[i].link,
         guid: feedEntries[i].guid,
         author: "Gary Larson",
