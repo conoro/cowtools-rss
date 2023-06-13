@@ -17,7 +17,7 @@
   "author": "Conor O'Neill",
   "license": "Apache-2.0",
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.145.0",
+    "@aws-sdk/client-s3": "^3.350.0",
     "aws-sdk": "^2.1354.0",
     "cheerio": "^1.0.0-rc.12",
     "node-fetch": "^3.2.10",
