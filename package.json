@@ -1,11 +1,14 @@
 {
   "name": "cowtools-rss",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Unofficial RSS feed for The Far Side",
-  "main": "index.js",
+  "main": "handler.js",
   "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
   "keywords": [
     "cowtools",
@@ -17,12 +20,9 @@
   "author": "Conor O'Neill",
   "license": "Apache-2.0",
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.145.0",
-    "aws-sdk": "^2.1354.0",
-    "cheerio": "^1.0.0-rc.12",
-    "node-fetch": "^3.2.10",
+    "@aws-sdk/client-s3": "^3.1123.0",
+    "cheerio": "^1.2.0",
     "rss": "^1.2.2",
-    "serverless-secrets-plugin": "^0.1.0",
-    "slugify": "^1.6.5"
+    "slugify": "^1.6.9"
   }
 }

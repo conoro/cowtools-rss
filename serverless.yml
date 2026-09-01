@@ -1,6 +1,6 @@
 service: cowtools-rss
 
-frameworkVersion: ">=2.24.0"
+frameworkVersion: ">=3"
 
 #plugins:
 #  - serverless-secrets-plugin
@@ -11,7 +11,7 @@ custom:
 
 provider:
   name: aws
-  runtime: nodejs16.x
+  runtime: nodejs24.x
   stage: dev
   region: eu-west-1
   iam:
@@ -33,6 +33,9 @@ functions:
   check:
     handler: handler.check
     description: generate RSS feed for Far Side comic strips
+    # Scrapes the site and mirrors up to five images into S3 on a cold day; the 6s
+    # default leaves no headroom for that.
+    timeout: 30
     environment:
       BUCKET: ${self:custom.bucket}
 #      AWS_ACCESS_KEY_ID: ${self:custom.secrets.AWS_ACCESS_KEY_ID}
