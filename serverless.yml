@@ -1,6 +1,8 @@
 service: cowtools-rss
 
-frameworkVersion: ">=3"
+# v4 coerces this to a concrete version and compares major numbers only, so a range
+# like ">=3" is read as 3.0.0 and rejected. Must start with the major you run.
+frameworkVersion: "4"
 
 #plugins:
 #  - serverless-secrets-plugin
