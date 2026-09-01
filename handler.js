@@ -1,15 +1,12 @@
 // Cowtools RSS - Copyright Conor O'Neill 2022, conor@conoroneill.com
 // LICENSE Apache-2.0
-// Invoke like https://url.of.serverless.function/dev/rss
-
-import { Buffer } from 'node:buffer';
+// Scrapes thefarside.com and renders an RSS feed. See build.mjs for the GitHub
+// Actions entry point, and check() below for the legacy Lambda one.
 
 import * as cheerio from 'cheerio';
 import RSS from 'rss';
-import slugify from 'slugify';
-import { S3Client, HeadObjectCommand, PutObjectCommand } from '@aws-sdk/client-s3';
 
-const SITE = "https://www.thefarside.com";
+export const SITE = "https://www.thefarside.com";
 
 const USER_AGENT =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36";
@@ -18,8 +15,6 @@ const USER_AGENT =
 // serves the *same* one for every card on the page. Treated as a comic it produces a
 // pile of identical entries, so drop those cards instead.
 const ERROR_IMAGE = "content-error-missing-image";
-
-const s3 = new S3Client({});
 
 // Captions routinely contain quotes and ampersands. They get interpolated into an
 // alt="" attribute and into the description markup, so they have to be escaped or the
@@ -81,8 +76,8 @@ export function scrapeComics(html) {
 
     const caption = card.find("figcaption").text().replace(/\s+/g, " ").trim();
     // The fallback used to carry the date the feed was generated, so an uncaptioned
-    // strip was retitled - and re-cached under a new key - every time the clock rolled
-    // past midnight UTC while the same strip was still on the page.
+    // strip was retitled every time the clock rolled past midnight UTC while the same
+    // strip was still on the page.
     const named =
       caption ||
       `No caption ${posted ? posted.date : new Date().toISOString().split("T")[0]}-${
@@ -96,65 +91,49 @@ export function scrapeComics(html) {
       // Dating a strip by the day it was scraped rewrites the entry every time the feed
       // is generated. Date it by the day The Far Side published it instead.
       published: posted ? posted.published : new Date(),
-      title: cleanTitle(named),
-      filename: slugify(named, { remove: /[*+~.,?…()'!“”—’"!:@]/g }).toLowerCase() + ".jpg"
+      title: cleanTitle(named)
     });
   });
 
   return entries;
 }
 
-// Mirror the strip into S3 once, so the feed points at an image that stays reachable.
-async function cacheImage(bucket, key, imageUrl) {
-  try {
-    await s3.send(new HeadObjectCommand({ Bucket: bucket, Key: key }));
-    return;
-  } catch (error) {
-    if (error.name !== "NotFound" && error.$metadata?.httpStatusCode !== 404) {
-      console.log(error);
-      return;
-    }
+// thefarside.com only shows the current day, so a feed with any history has to
+// accumulate it. First capture wins: re-reading a strip we have already published would
+// rewrite its title or date under readers that have shown it.
+export function mergeEntries(known, fresh, max) {
+  const byGuid = new Map(known.map((entry) => [entry.guid, entry]));
+  let added = 0;
+
+  for (const entry of fresh) {
+    if (byGuid.has(entry.guid)) continue;
+    byGuid.set(entry.guid, entry);
+    added++;
   }
 
-  const response = await fetch(imageUrl, {
-    headers: { referer: SITE, "user-agent": USER_AGENT }
-  });
-  if (!response.ok) {
-    console.log(`Could not fetch ${imageUrl}: ${response.status}`);
-    return;
-  }
+  const entries = [...byGuid.values()]
+    .sort((a, b) => new Date(b.published) - new Date(a.published))
+    .slice(0, max);
 
-  const stored = await s3.send(
-    new PutObjectCommand({
-      Bucket: bucket,
-      Key: key,
-      ACL: "public-read",
-      ContentType: response.headers.get("content-type") || "image/jpeg",
-      Body: Buffer.from(await response.arrayBuffer())
-    })
-  );
-  console.log(stored);
+  return { entries, added };
 }
 
-export function renderFeed(entries, bucket) {
+export function renderFeed(entries) {
   const feed = new RSS({
     title: "Cowtools RSS",
     description: "Return latest comic strips from The Far Side",
-    feed_url: "http://example.com/rss.xml",
+    feed_url: "https://conoro.github.io/cowtools-rss/feed.xml",
     site_url: SITE,
     image_url:
       "https://assets.thefarside.com/assets/packs/media/images/brand/meta_icons/android-chrome-192x192-17a2da94f812f9f4a41ed8ed1be4d889.png",
-    docs: "http://example.com/rss/docs.html",
     managingEditor: "conor@conoroneill.com",
     webMaster: "conor@conoroneill.com",
     copyright: "2020 Conor ONeill",
     language: "en",
-    pubDate: "Jan 01, 2020 06:00:00 GMT",
     ttl: "60"
   });
 
   for (const entry of entries) {
-    const src = `https://${bucket}.s3.amazonaws.com/${entry.filename}`;
     const title = escapeHtml(entry.title);
 
     // align= as well as style=, because plenty of readers strip inline styles out of
@@ -163,32 +142,32 @@ export function renderFeed(entries, bucket) {
       title: entry.title,
       description:
         `<div align="center" style="text-align:center">` +
-        `<img src="${escapeHtml(src)}" alt="${title}" /><br /><br />` +
+        `<img src="${escapeHtml(entry.image)}" alt="${title}" /><br /><br />` +
         `<p align="center" style="text-align:center">${title}</p>` +
         `</div>`,
       url: entry.link,
       guid: entry.guid,
       author: "Gary Larson",
-      date: entry.published
+      date: new Date(entry.published)
     });
   }
 
   return feed.xml();
 }
 
-export async function buildFeed({ bucket, cache = true } = {}) {
+export async function fetchComics() {
   const response = await fetch(SITE, { headers: { "user-agent": USER_AGENT } });
   if (!response.ok) throw new Error(`${SITE} returned ${response.status}`);
-
-  const entries = scrapeComics(await response.text());
-
-  if (cache) {
-    await Promise.all(entries.map((entry) => cacheImage(bucket, entry.filename, entry.image)));
-  }
-
-  return renderFeed(entries, bucket);
+  return scrapeComics(await response.text());
 }
 
+export async function buildFeed() {
+  return renderFeed(await fetchComics());
+}
+
+// Legacy AWS Lambda entry point, kept so the existing endpoint keeps serving while
+// subscribers move to the GitHub Pages URL. Serves only the current day, with no
+// history - build.mjs is the one that accumulates.
 export async function check() {
-  return buildFeed({ bucket: process.env.BUCKET });
+  return buildFeed();
 }

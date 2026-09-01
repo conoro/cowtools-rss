@@ -5,41 +5,17 @@ frameworkVersion: ">=3"
 #plugins:
 #  - serverless-secrets-plugin
 
-custom:
-  bucket: rss-image-cache
-#  secrets: ${file(secrets.${opt:stage, self:provider.stage}.yml)}
-
 provider:
   name: aws
   runtime: nodejs24.x
   stage: dev
   region: eu-west-1
-  iam:
-    role:
-      statements:
-        - Effect: Allow
-          Action:
-            - s3:PutObject
-            - s3:PutObjectAcl
-            - s3:GetObject
-            - s3:GetObjectAcl
-            - s3:ListBucket 
-          Resource: "arn:aws:s3:::${self:custom.bucket}/*"
-        - Effect: Allow
-          Action:
-            - s3:ListBucket 
-          Resource: "arn:aws:s3:::${self:custom.bucket}"
 functions:
   check:
     handler: handler.check
     description: generate RSS feed for Far Side comic strips
-    # Scrapes the site and mirrors up to five images into S3 on a cold day; the 6s
-    # default leaves no headroom for that.
-    timeout: 30
-    environment:
-      BUCKET: ${self:custom.bucket}
-#      AWS_ACCESS_KEY_ID: ${self:custom.secrets.AWS_ACCESS_KEY_ID}
-#      AWS_SECRET_ACCESS_KEY: ${self:custom.secrets.AWS_SECRET_ACCESS_KEY}
+    # One scrape of thefarside.com; the 6s default is tight on a cold start.
+    timeout: 15
     events:
       - http:
           path: rss

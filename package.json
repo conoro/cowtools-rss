@@ -8,7 +8,8 @@
     "node": ">=20"
   },
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "build": "node build.mjs"
   },
   "keywords": [
     "cowtools",
@@ -20,9 +21,7 @@
   "author": "Conor O'Neill",
   "license": "Apache-2.0",
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.1123.0",
     "cheerio": "^1.2.0",
-    "rss": "^1.2.2",
-    "slugify": "^1.6.9"
+    "rss": "^1.2.2"
   }
 }
