@@ -4,9 +4,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-import { scrapeComics, renderFeed, buildFeed } from "./handler.js";
-
-const BUCKET = "rss-image-cache";
+import { scrapeComics, renderFeed, buildFeed, mergeEntries } from "./handler.js";
 
 function card({ index, image, caption, date = "2026/08/31" }) {
   return `
@@ -51,18 +49,40 @@ test("identifies each strip by its Far Side permalink, not the CDN image URL", (
 test("regenerating the feed produces byte-identical items", () => {
   // The duplication bug: every entry was stamped with the generation time, so each
   // poll presented the same strips as newly published.
-  const first = renderFeed(scrapeComics(page), BUCKET);
-  const second = renderFeed(scrapeComics(page), BUCKET);
+  const first = renderFeed(scrapeComics(page));
+  const second = renderFeed(scrapeComics(page));
   assert.deepEqual(items(second), items(first));
   assert.match(items(first)[0], /<pubDate>Mon, 31 Aug 2026 12:00:00 GMT<\/pubDate>/);
 });
 
 test("an uncaptioned strip keeps its title across a UTC midnight", () => {
-  // Previously "No caption <today>-<n>", so the title, the S3 key and the image URL in
-  // the description all changed under the reader while the strip was still on the page.
-  const entry = scrapeComics(page)[1];
-  assert.equal(entry.title, "No caption 2026-08-31-1");
-  assert.equal(entry.filename, "no-caption-2026-08-31-1.jpg");
+  // Previously "No caption <today>-<n>", so the title changed under the reader while
+  // the strip was still on the page.
+  assert.equal(scrapeComics(page)[1].title, "No caption 2026-08-31-1");
+});
+
+test("keeps history, newest first, without rewriting known strips", () => {
+  const known = scrapeComics(page);
+  const nextDay = scrapeComics(
+    page.replace(/2026\/08\/31/g, "2026/09/01").replace(/aaa|bbb|ccc/g, (m) => m + "2")
+  );
+
+  const { entries, added } = mergeEntries(known, nextDay, 100);
+  assert.equal(added, 3);
+  assert.equal(entries.length, 6);
+  assert.match(entries[0].guid, /2026\/09\/01\/2$/, "newest strip first");
+  assert.match(entries[5].guid, /2026\/08\/31\/0$/, "oldest strip last");
+
+  // Re-scraping a day we already hold must be a no-op, not a rewrite.
+  const again = mergeEntries(entries, known, 100);
+  assert.equal(again.added, 0);
+  assert.deepEqual(again.entries, entries);
+});
+
+test("caps the feed at the requested length, dropping the oldest", () => {
+  const { entries } = mergeEntries(scrapeComics(page), [], 2);
+  assert.equal(entries.length, 2);
+  assert.match(entries[0].guid, /\/2$/);
 });
 
 test("drops the site's missing-image placeholder instead of repeating it", () => {
@@ -83,7 +103,7 @@ test("de-duplicates strips repeated on the page", () => {
 });
 
 test("puts the caption below the image, centered, and escapes it", () => {
-  const xml = renderFeed(scrapeComics(page), BUCKET);
+  const xml = renderFeed(scrapeComics(page));
   const item = items(xml)[2];
   const description = /<description><!\[CDATA\[([\s\S]*?)\]\]><\/description>/.exec(item)[1];
 
@@ -100,10 +120,13 @@ test("puts the caption below the image, centered, and escapes it", () => {
 
   // Caption is in the title too.
   assert.match(item, /<title><!\[CDATA\["This is Harold Schwartz!/);
+
+  // Images are hotlinked from the CDN now; the URLs are content-addressed and permanent.
+  assert.match(description, /<img src="https:\/\/featureassets\.amuniversal\.com\/assets\/ccc"/);
 });
 
 test("live: thefarside.com still yields unique, permalink-shaped entries", async () => {
-  const xml = await buildFeed({ bucket: BUCKET, cache: false });
+  const xml = await buildFeed();
   const found = guids(xml);
   assert.ok(found.length > 0, "expected at least one strip");
   assert.equal(new Set(found).size, found.length, "guids must be unique");
