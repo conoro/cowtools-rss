@@ -1,7 +1,6 @@
 // Cowtools RSS - Copyright Conor O'Neill 2022, conor@conoroneill.com
 // LICENSE Apache-2.0
-// Scrapes thefarside.com and renders an RSS feed. See build.mjs for the GitHub
-// Actions entry point, and check() below for the legacy Lambda one.
+// Scrapes thefarside.com and renders an RSS feed. build.mjs is the entry point.
 
 import * as cheerio from 'cheerio';
 import RSS from 'rss';
@@ -163,11 +162,4 @@ export async function fetchComics() {
 
 export async function buildFeed() {
   return renderFeed(await fetchComics());
-}
-
-// Legacy AWS Lambda entry point, kept so the existing endpoint keeps serving while
-// subscribers move to the GitHub Pages URL. Serves only the current day, with no
-// history - build.mjs is the one that accumulates.
-export async function check() {
-  return buildFeed();
 }

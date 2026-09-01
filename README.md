@@ -17,14 +17,13 @@ strip your reader has already shown never resurfaces. First capture wins: a stri
 already hold is never rewritten.
 
 Images are hotlinked from `featureassets.amuniversal.com`. Those URLs are
-content-addressed and carry no signature or expiry — assets from 2022 are still served
-at the same path — so the S3 mirror this project used to keep is no longer needed.
+content-addressed and carry no signature or expiry, so they stay good indefinitely.
 
 ## Running it locally
 
 ```bash
 npm install
-npm test     # fixture tests plus a live check against thefarside.com
+npm test      # fixture tests plus a live check against thefarside.com
 npm run build # writes docs/entries.json and docs/feed.xml
 ```
 
@@ -39,12 +38,6 @@ hand from the Actions tab.
 > Scheduled workflows are disabled after 60 days without a commit to the repository.
 > This one commits whenever the feed changes, which is most days, so it should keep
 > itself alive — but if the feed goes stale, check the workflow is still enabled.
-
-## The old Lambda
-
-`serverless.yml` and the `check` export still deploy the original on-demand endpoint,
-kept so the old feed URL keeps working while subscribers move across. It serves only the
-current day, with no history. Delete both once nothing is reading it.
 
 LICENSE Apache-2.0
 

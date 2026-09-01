@@ -15,8 +15,7 @@
     "cowtools",
     "rss",
     "far side",
-    "comic",
-    "serverless"
+    "comic"
   ],
   "author": "Conor O'Neill",
   "license": "Apache-2.0",
