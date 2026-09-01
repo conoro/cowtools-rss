@@ -4,7 +4,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-import { scrapeComics, renderFeed, buildFeed, mergeEntries } from "./handler.js";
+import { scrapeComics, renderFeed, fetchComics, mergeEntries } from "./feed.js";
 
 function card({ index, image, caption, date = "2026/08/31" }) {
   return `
@@ -126,7 +126,7 @@ test("puts the caption below the image, centered, and escapes it", () => {
 });
 
 test("live: thefarside.com still yields unique, permalink-shaped entries", async () => {
-  const xml = await buildFeed();
+  const xml = renderFeed(await fetchComics());
   const found = guids(xml);
   assert.ok(found.length > 0, "expected at least one strip");
   assert.equal(new Set(found).size, found.length, "guids must be unique");

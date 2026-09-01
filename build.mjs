@@ -3,7 +3,7 @@
 
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 
-import { fetchComics, mergeEntries, renderFeed } from "./handler.js";
+import { fetchComics, mergeEntries, renderFeed } from "./feed.js";
 
 const OUT_DIR = "docs";
 const STATE = `${OUT_DIR}/entries.json`;

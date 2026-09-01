@@ -5,7 +5,7 @@
 import * as cheerio from 'cheerio';
 import RSS from 'rss';
 
-export const SITE = "https://www.thefarside.com";
+const SITE = "https://www.thefarside.com";
 
 const USER_AGENT =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36";
@@ -158,8 +158,4 @@ export async function fetchComics() {
   const response = await fetch(SITE, { headers: { "user-agent": USER_AGENT } });
   if (!response.ok) throw new Error(`${SITE} returned ${response.status}`);
   return scrapeComics(await response.text());
-}
-
-export async function buildFeed() {
-  return renderFeed(await fetchComics());
 }

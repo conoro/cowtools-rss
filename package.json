@@ -2,7 +2,7 @@
   "name": "cowtools-rss",
   "version": "2.0.0",
   "description": "Unofficial RSS feed for The Far Side",
-  "main": "handler.js",
+  "main": "feed.js",
   "type": "module",
   "engines": {
     "node": ">=20"
