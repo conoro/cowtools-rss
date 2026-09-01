@@ -2,134 +2,193 @@
 // LICENSE Apache-2.0
 // Invoke like https://url.of.serverless.function/dev/rss
 
-
-import fetch from 'node-fetch';
-
 import { Buffer } from 'node:buffer';
 
-// import entire SDK
-import AWS from 'aws-sdk';
-
 import * as cheerio from 'cheerio';
+import RSS from 'rss';
+import slugify from 'slugify';
+import { S3Client, HeadObjectCommand, PutObjectCommand } from '@aws-sdk/client-s3';
 
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
-var RSS = require("rss");
-var slugify = require('slugify');
+const SITE = "https://www.thefarside.com";
 
-var s3 = new AWS.S3();
+const USER_AGENT =
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36";
 
-import url from 'node:url';
+// The Far Side serves this placeholder whenever a day's strips fail to load, and it
+// serves the *same* one for every card on the page. Treated as a comic it produces a
+// pile of identical entries, so drop those cards instead.
+const ERROR_IMAGE = "content-error-missing-image";
 
-export function check(event, context, callback) {
+const s3 = new S3Client({});
 
-  async function getCowTools() {
-    var URL = "https://www.thefarside.com";
+// Captions routinely contain quotes and ampersands. They get interpolated into an
+// alt="" attribute and into the description markup, so they have to be escaped or the
+// tag terminates early and the reader renders mangled HTML.
+function escapeHtml(text) {
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
 
-    var feed = new RSS({
-      title: "Cowtools RSS",
-      description: "Return latest comic strips from The Far Side",
-      feed_url: "http://example.com/rss.xml",
-      site_url: URL,
-      image_url:
-        "https://assets.thefarside.com/assets/packs/media/images/brand/meta_icons/android-chrome-192x192-17a2da94f812f9f4a41ed8ed1be4d889.png",
-      docs: "http://example.com/rss/docs.html",
-      managingEditor: "conor@conoroneill.com",
-      webMaster: "conor@conoroneill.com",
-      copyright: "2020 Conor ONeill",
-      language: "en",
-      pubDate: "Jan 01, 2020 06:00:00 GMT",
-      ttl: "60"
+// Characters that display badly in Feedly.
+function cleanTitle(title) {
+  return title
+    .replace(/[’]/g, "'")
+    .replace(/[“”]/g, '"')
+    .replace(/[*+~…—@]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+// Every strip on the page carries the site's own permalink, e.g.
+// https://www.thefarside.com/2026/08/31/2 - stable, unique, and unlike the CDN image
+// URL it survives the asset host moves that keep happening.
+function parsePermalink(permalink) {
+  const match = /\/(\d{4})\/(\d{2})\/(\d{2})\/(\d+)\/?$/.exec(permalink || "");
+  if (!match) return null;
+  const [, year, month, day, index] = match;
+  return {
+    date: `${year}-${month}-${day}`,
+    // Noon UTC keeps the date reading correctly either side of the Atlantic, and the
+    // index spaces the strips a minute apart so readers keep the site's ordering.
+    published: new Date(Date.UTC(+year, +month - 1, +day, 12, +index)),
+    index: +index
+  };
+}
+
+export function scrapeComics(html) {
+  const $ = cheerio.load(html);
+  const entries = [];
+  const seen = new Set();
+
+  $(".tfs-comic").each(function (position) {
+    const card = $(this);
+    const image = card.find(".tfs-comic__image img").attr("data-src");
+    if (!image || image.includes(ERROR_IMAGE)) return;
+
+    const permalink =
+      card.find("[data-likable-permalink]").attr("data-likable-permalink") ||
+      card.find("[data-shareable-permalink]").attr("data-shareable-permalink");
+    const posted = parsePermalink(permalink);
+
+    // The permalink is the identity we publish. If the markup ever stops carrying one,
+    // fall back to the image URL rather than dropping the strip entirely.
+    const guid = posted ? permalink : image;
+    if (seen.has(guid)) return;
+    seen.add(guid);
+
+    const caption = card.find("figcaption").text().replace(/\s+/g, " ").trim();
+    // The fallback used to carry the date the feed was generated, so an uncaptioned
+    // strip was retitled - and re-cached under a new key - every time the clock rolled
+    // past midnight UTC while the same strip was still on the page.
+    const named =
+      caption ||
+      `No caption ${posted ? posted.date : new Date().toISOString().split("T")[0]}-${
+        posted ? posted.index : position
+      }`;
+
+    entries.push({
+      guid,
+      image,
+      link: posted ? permalink : image,
+      // Dating a strip by the day it was scraped rewrites the entry every time the feed
+      // is generated. Date it by the day The Far Side published it instead.
+      published: posted ? posted.published : new Date(),
+      title: cleanTitle(named),
+      filename: slugify(named, { remove: /[*+~.,?…()'!“”—’"!:@]/g }).toLowerCase() + ".jpg"
     });
+  });
 
+  return entries;
+}
 
-    let feedEntries = [];
-
-    let response = await fetch(URL);
-    let body = await response.text();
-    if (response.ok) {
-
-      let imagecounter = 0;
-      let $ = cheerio.load(body);
-      $(".tfs-comic").each(function () {
-        let entry = {};
-        entry.link = $(this).find("img").attr("data-src");
-        entry.imgURL = url.parse(entry.link);
-        entry.guid = entry.imgURL.href.replace(entry.imgURL.search, '');
-        let filetimestamp = new Date().toISOString().split('T')[0];
-        entry.title = $(this).find("figcaption").text() || "No caption " + filetimestamp + "-" + imagecounter;
-        // Farside empty caption is a mix of spaces and carriage returns. Remove carriage returns first
-        entry.title = entry.title.replace(/\r?\n|\r/g, " ");
-        // Then if all spaces, set caption to some text
-        if((entry.title === null) || (entry.title.match(/^ *$/) !== null)) entry.title = "No caption " + filetimestamp + "-" + imagecounter;;
-        entry.currentDate = new Date();
-        feedEntries.push(entry);
-        imagecounter++;
-      });
+// Mirror the strip into S3 once, so the feed points at an image that stays reachable.
+async function cacheImage(bucket, key, imageUrl) {
+  try {
+    await s3.send(new HeadObjectCommand({ Bucket: bucket, Key: key }));
+    return;
+  } catch (error) {
+    if (error.name !== "NotFound" && error.$metadata?.httpStatusCode !== 404) {
+      console.log(error);
+      return;
     }
-
-    for (let i = 0; i < feedEntries.length; i++) {
-      let options = {
-        hostname: feedEntries[i].imgURL.hostname,
-        path: feedEntries[i].imgURL.path,
-        method: "GET",
-        headers: {
-          "authority": "thefarsideassets.thefarside.com",
-          "cookie": "_ga=GA1.2.1418424814.1660376004; _gid=GA1.2.1032644222.1660376004; ccpaUUID=d795b898-1890-4f12-ba55-ede4eb435d37; dnsDisplayed=false; ccpaApplies=false; signedLspa=false; __qca=P0-531169800-1660376004770; _sp_krux=false",
-          "referer": "https://www.thefarside.com/",
-          "sec-fetch-dest": "image",
-          "sec-fetch-mode": "no-cors",
-          "sec-fetch-site": "same-site",
-          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36"
-        },
-      };
-
-      let response2 = await fetch(feedEntries[i].imgURL.href, options);
-      let resBlob = await response2.blob();
-      let resBuffer = await resBlob.arrayBuffer();
-      resBuffer = Buffer.from(resBuffer);
-
-
-      // https://rss-image-cache.s3.amazonaws.com/hang-on-betty-someones-bound-to-see-us-eventually.jpg
-      let filename = slugify(feedEntries[i].title, { remove: /[*+~.,?…()'!“”—’"!:@]/g }).toLowerCase() + ".jpg";
-
-      // Only upload image if it doesn't exist
-      try {
-        await s3.headObject({
-          Bucket: process.env.BUCKET,
-          Key: filename
-        }).promise();
-      } catch (error) {
-        if (error.name === 'NotFound') {
-          const stored = await s3.upload({
-            Bucket: process.env.BUCKET,
-            Key: filename,
-            ACL: 'public-read',
-            Body: resBuffer
-          }).promise();
-          console.log(stored);
-        } else {
-          console.log(error);
-        }
-      }
-
-      let cleaned_title = feedEntries[i].title.replace(/[’]/g, '\''); 
-      cleaned_title = cleaned_title.replace(/[“”]/g, '"'); 
-      cleaned_title = cleaned_title.replace(/[*+~…—@]/g, ' '); 
-      feed.item({
-        title: cleaned_title,
-        description: '<p style="text-align:center"><img src="' + "https://" + process.env.BUCKET + ".s3.amazonaws.com/" + filename + '" alt="' + cleaned_title + '" /><br><br>'+cleaned_title + '</p>',
-        url: feedEntries[i].link,
-        guid: feedEntries[i].guid,
-        author: "Gary Larson",
-        date: feedEntries[i].currentDate
-      });
-
-    }
-    var xml = feed.xml();
-    context.succeed(xml);
   }
- 
-  getCowTools();
 
+  const response = await fetch(imageUrl, {
+    headers: { referer: SITE, "user-agent": USER_AGENT }
+  });
+  if (!response.ok) {
+    console.log(`Could not fetch ${imageUrl}: ${response.status}`);
+    return;
+  }
+
+  const stored = await s3.send(
+    new PutObjectCommand({
+      Bucket: bucket,
+      Key: key,
+      ACL: "public-read",
+      ContentType: response.headers.get("content-type") || "image/jpeg",
+      Body: Buffer.from(await response.arrayBuffer())
+    })
+  );
+  console.log(stored);
+}
+
+export function renderFeed(entries, bucket) {
+  const feed = new RSS({
+    title: "Cowtools RSS",
+    description: "Return latest comic strips from The Far Side",
+    feed_url: "http://example.com/rss.xml",
+    site_url: SITE,
+    image_url:
+      "https://assets.thefarside.com/assets/packs/media/images/brand/meta_icons/android-chrome-192x192-17a2da94f812f9f4a41ed8ed1be4d889.png",
+    docs: "http://example.com/rss/docs.html",
+    managingEditor: "conor@conoroneill.com",
+    webMaster: "conor@conoroneill.com",
+    copyright: "2020 Conor ONeill",
+    language: "en",
+    pubDate: "Jan 01, 2020 06:00:00 GMT",
+    ttl: "60"
+  });
+
+  for (const entry of entries) {
+    const src = `https://${bucket}.s3.amazonaws.com/${entry.filename}`;
+    const title = escapeHtml(entry.title);
+
+    // align= as well as style=, because plenty of readers strip inline styles out of
+    // feed HTML and the caption then drifts to the left of the strip.
+    feed.item({
+      title: entry.title,
+      description:
+        `<div align="center" style="text-align:center">` +
+        `<img src="${escapeHtml(src)}" alt="${title}" /><br /><br />` +
+        `<p align="center" style="text-align:center">${title}</p>` +
+        `</div>`,
+      url: entry.link,
+      guid: entry.guid,
+      author: "Gary Larson",
+      date: entry.published
+    });
+  }
+
+  return feed.xml();
+}
+
+export async function buildFeed({ bucket, cache = true } = {}) {
+  const response = await fetch(SITE, { headers: { "user-agent": USER_AGENT } });
+  if (!response.ok) throw new Error(`${SITE} returned ${response.status}`);
+
+  const entries = scrapeComics(await response.text());
+
+  if (cache) {
+    await Promise.all(entries.map((entry) => cacheImage(bucket, entry.filename, entry.image)));
+  }
+
+  return renderFeed(entries, bucket);
+}
+
+export async function check() {
+  return buildFeed({ bucket: process.env.BUCKET });
 }
