@@ -1,5 +1,40 @@
 [
   {
+    "guid": "https://www.thefarside.com/2026/09/28/4",
+    "image": "https://featureassets.amuniversal.com/assets/63d659b0cdd20137c56b005056a9545d",
+    "link": "https://www.thefarside.com/2026/09/28/4",
+    "published": "2026-09-28T12:04:00.000Z",
+    "title": "No caption 2026-09-28-4"
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/09/28/3",
+    "image": "https://featureassets.amuniversal.com/assets/2fda5ab0ea260137cfba005056a9545d",
+    "link": "https://www.thefarside.com/2026/09/28/3",
+    "published": "2026-09-28T12:03:00.000Z",
+    "title": "Professor Wainwright's painstaking field research to decode the language of bears comes to a sudden and horrific end."
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/09/28/2",
+    "image": "https://featureassets.amuniversal.com/assets/19333460cdd40137c56b005056a9545d",
+    "link": "https://www.thefarside.com/2026/09/28/2",
+    "published": "2026-09-28T12:02:00.000Z",
+    "title": "\"Oh, Mrs. Oswald ... you've forgotten something again.\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/09/28/1",
+    "image": "https://featureassets.amuniversal.com/assets/84b2ecd0cdd20137c56b005056a9545d",
+    "link": "https://www.thefarside.com/2026/09/28/1",
+    "published": "2026-09-28T12:01:00.000Z",
+    "title": "\"He bit the Godfather.\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/09/28/0",
+    "image": "https://featureassets.amuniversal.com/assets/081d899002810138d7bb005056a9545d",
+    "link": "https://www.thefarside.com/2026/09/28/0",
+    "published": "2026-09-28T12:00:00.000Z",
+    "title": "\"C'mon, c'mon it's either one or the other.\""
+  },
+  {
     "guid": "https://www.thefarside.com/2026/09/27/1",
     "image": "https://featureassets.amuniversal.com/assets/b7375ab0fa850137d52f005056a9545d",
     "link": "https://www.thefarside.com/2026/09/27/1",
@@ -663,12 +698,5 @@
     "link": "https://www.thefarside.com/2026/08/31/1",
     "published": "2026-08-31T12:01:00.000Z",
     "title": "No caption 2026-08-31-1"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/08/31/0",
-    "image": "https://featureassets.amuniversal.com/assets/a858db40df0f0137cbaf005056a9545d",
-    "link": "https://www.thefarside.com/2026/08/31/0",
-    "published": "2026-08-31T12:00:00.000Z",
-    "title": "In God's den"
   }
 ]
