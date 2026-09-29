@@ -1,5 +1,40 @@
 [
   {
+    "guid": "https://www.thefarside.com/2026/09/29/4",
+    "image": "https://featureassets.amuniversal.com/assets/04585120cdd30137c56b005056a9545d",
+    "link": "https://www.thefarside.com/2026/09/29/4",
+    "published": "2026-09-29T12:04:00.000Z",
+    "title": "\"And the last gladiator left alive will win the contest. But first the egg-toss!\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/09/29/3",
+    "image": "https://featureassets.amuniversal.com/assets/27c28bd0e92f0137cf47005056a9545d",
+    "link": "https://www.thefarside.com/2026/09/29/3",
+    "published": "2026-09-29T12:03:00.000Z",
+    "title": "\"Confession time, Mona I've led you astray.\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/09/29/2",
+    "image": "https://featureassets.amuniversal.com/assets/80f255d0dcca0137caaf005056a9545d",
+    "link": "https://www.thefarside.com/2026/09/29/2",
+    "published": "2026-09-29T12:02:00.000Z",
+    "title": "Stupid clerks"
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/09/29/1",
+    "image": "https://featureassets.amuniversal.com/assets/277fd020e92e0137cf47005056a9545d",
+    "link": "https://www.thefarside.com/2026/09/29/1",
+    "published": "2026-09-29T12:01:00.000Z",
+    "title": "\"So please welcome our keynote speaker, Professor Melvin Fenwick the man who, back in 1952, first coined the now common phrase: ‘Fools! I'll destroy them all!'\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/09/29/0",
+    "image": "https://featureassets.amuniversal.com/assets/30a062b0d0f70137c652005056a9545d",
+    "link": "https://www.thefarside.com/2026/09/29/0",
+    "published": "2026-09-29T12:00:00.000Z",
+    "title": "In the hallway of the Old Cartoonists' Home"
+  },
+  {
     "guid": "https://www.thefarside.com/2026/09/28/4",
     "image": "https://featureassets.amuniversal.com/assets/63d659b0cdd20137c56b005056a9545d",
     "link": "https://www.thefarside.com/2026/09/28/4",
@@ -663,40 +698,5 @@
     "link": "https://www.thefarside.com/2026/09/01/1",
     "published": "2026-09-01T12:01:00.000Z",
     "title": "Entomological rodeos"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/01/0",
-    "image": "https://featureassets.amuniversal.com/assets/e01545c002800138d7bb005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/01/0",
-    "published": "2026-09-01T12:00:00.000Z",
-    "title": "No caption 2026-09-01-0"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/08/31/4",
-    "image": "https://featureassets.amuniversal.com/assets/64bd7690d7410137c8a6005056a9545d",
-    "link": "https://www.thefarside.com/2026/08/31/4",
-    "published": "2026-08-31T12:04:00.000Z",
-    "title": "While Farmer Brown was away, the cows got into the kitchen and were having the time of their lives until Betsy's unwitting discovery."
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/08/31/3",
-    "image": "https://featureassets.amuniversal.com/assets/521af750dcca0137caaf005056a9545d",
-    "link": "https://www.thefarside.com/2026/08/31/3",
-    "published": "2026-08-31T12:03:00.000Z",
-    "title": "\"Whoopsies! If this tomb does have a curse on it, Webster, I daresay we'll be the first to find out.\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/08/31/2",
-    "image": "https://featureassets.amuniversal.com/assets/6c8271c0cdd50137c56b005056a9545d",
-    "link": "https://www.thefarside.com/2026/08/31/2",
-    "published": "2026-08-31T12:02:00.000Z",
-    "title": "\"This is Harold Schwartz! ... Something horrible is happening out here!\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/08/31/1",
-    "image": "https://featureassets.amuniversal.com/assets/e6c397c0cdd50137c56b005056a9545d",
-    "link": "https://www.thefarside.com/2026/08/31/1",
-    "published": "2026-08-31T12:01:00.000Z",
-    "title": "No caption 2026-08-31-1"
   }
 ]
