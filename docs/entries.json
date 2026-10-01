@@ -1,5 +1,40 @@
 [
   {
+    "guid": "https://www.thefarside.com/2026/09/30/4",
+    "image": "https://featureassets.amuniversal.com/assets/503ecb50d8ba0137c959005056a9545d",
+    "link": "https://www.thefarside.com/2026/09/30/4",
+    "published": "2026-09-30T12:04:00.000Z",
+    "title": "\"Uh-oh, Ruby. ... The apartment downstairs is awfully quiet.\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/09/30/3",
+    "image": "https://featureassets.amuniversal.com/assets/90033170e4780137cd9d005056a9545d",
+    "link": "https://www.thefarside.com/2026/09/30/3",
+    "published": "2026-09-30T12:03:00.000Z",
+    "title": "\"Okay, you've passed the fire test, the riding test, and the combat test but now, paleface, now you must say ‘toy boat' three times real fast!\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/09/30/2",
+    "image": "https://featureassets.amuniversal.com/assets/705a46f0e6f80137ce50005056a9545d",
+    "link": "https://www.thefarside.com/2026/09/30/2",
+    "published": "2026-09-30T12:02:00.000Z",
+    "title": "\"On three, Vince. Ready?\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/09/30/1",
+    "image": "https://featureassets.amuniversal.com/assets/40fc72e0fa840137d52f005056a9545d",
+    "link": "https://www.thefarside.com/2026/09/30/1",
+    "published": "2026-09-30T12:01:00.000Z",
+    "title": "Paramecium humor"
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/09/30/0",
+    "image": "https://featureassets.amuniversal.com/assets/40760810e6f80137ce50005056a9545d",
+    "link": "https://www.thefarside.com/2026/09/30/0",
+    "published": "2026-09-30T12:00:00.000Z",
+    "title": "\"Oh, yeah? Lewis, you're fired! You apparently forgot this is a cartoon, and I can read every word you think!\""
+  },
+  {
     "guid": "https://www.thefarside.com/2026/09/29/4",
     "image": "https://featureassets.amuniversal.com/assets/04585120cdd30137c56b005056a9545d",
     "link": "https://www.thefarside.com/2026/09/29/4",
@@ -663,40 +698,5 @@
     "link": "https://www.thefarside.com/2026/09/02/1",
     "published": "2026-09-02T12:01:00.000Z",
     "title": "\"Today, our guest lecturer is Dr. Clarence Tibbs, whose 20-year career has culminated in his recent autobiography, Zoo Vet I Quit!\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/02/0",
-    "image": "https://featureassets.amuniversal.com/assets/e6342020df100137cbaf005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/02/0",
-    "published": "2026-09-02T12:00:00.000Z",
-    "title": "Inside the sun"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/01/4",
-    "image": "https://featureassets.amuniversal.com/assets/f4a713e0e92e0137cf47005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/01/4",
-    "published": "2026-09-01T12:04:00.000Z",
-    "title": "Tensions mount on the Lewis and Clark expedition."
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/01/3",
-    "image": "https://featureassets.amuniversal.com/assets/e4d6bd30cdd60137c56b005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/01/3",
-    "published": "2026-09-01T12:03:00.000Z",
-    "title": "\"We're too late! He jumped!\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/01/2",
-    "image": "https://featureassets.amuniversal.com/assets/46b91dc0d7420137c8a6005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/01/2",
-    "published": "2026-09-01T12:02:00.000Z",
-    "title": "\"Now this next slide, gentlemen, demonstrates the awesome power of our twenty megaton for crying out loud! Not again!\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/01/1",
-    "image": "https://featureassets.amuniversal.com/assets/66a21410e9ef0137cf93005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/01/1",
-    "published": "2026-09-01T12:01:00.000Z",
-    "title": "Entomological rodeos"
   }
 ]
