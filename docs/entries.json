@@ -1,5 +1,40 @@
 [
   {
+    "guid": "https://www.thefarside.com/2026/10/01/4",
+    "image": "https://featureassets.amuniversal.com/assets/2e276f80d8ba0137c959005056a9545d",
+    "link": "https://www.thefarside.com/2026/10/01/4",
+    "published": "2026-10-01T12:04:00.000Z",
+    "title": "Of course, the slugs worshipped their god out of fear, not love."
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/10/01/3",
+    "image": "https://featureassets.amuniversal.com/assets/5bd716b0cdd70137c56b005056a9545d",
+    "link": "https://www.thefarside.com/2026/10/01/3",
+    "published": "2026-10-01T12:03:00.000Z",
+    "title": "\"Big Bob says he's getting tired of you saying he doesn't really exist.\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/10/01/2",
+    "image": "https://featureassets.amuniversal.com/assets/245d4740d35f0137c76e005056a9545d",
+    "link": "https://www.thefarside.com/2026/10/01/2",
+    "published": "2026-10-01T12:02:00.000Z",
+    "title": "The origin of clothes"
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/10/01/1",
+    "image": "https://featureassets.amuniversal.com/assets/9df1d690df0f0137cbaf005056a9545d",
+    "link": "https://www.thefarside.com/2026/10/01/1",
+    "published": "2026-10-01T12:01:00.000Z",
+    "title": "Across town in the snake district"
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/10/01/0",
+    "image": "https://featureassets.amuniversal.com/assets/9d1a9800e9ef0137cf93005056a9545d",
+    "link": "https://www.thefarside.com/2026/10/01/0",
+    "published": "2026-10-01T12:00:00.000Z",
+    "title": "Summoned by the gonging, Professor Crutchfeld stepped into the clearing. The little caterpillars had done well this time in their offering."
+  },
+  {
     "guid": "https://www.thefarside.com/2026/09/30/4",
     "image": "https://featureassets.amuniversal.com/assets/503ecb50d8ba0137c959005056a9545d",
     "link": "https://www.thefarside.com/2026/09/30/4",
@@ -663,40 +698,5 @@
     "link": "https://www.thefarside.com/2026/09/03/1",
     "published": "2026-09-03T12:01:00.000Z",
     "title": "No caption 2026-09-03-1"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/03/0",
-    "image": "https://featureassets.amuniversal.com/assets/56096b90fa840137d52f005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/03/0",
-    "published": "2026-09-03T12:00:00.000Z",
-    "title": "\"No doubt about it, Ellington we've mathematically expressed the purpose of the universe. God, how I love the thrill of scientific discovery!\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/02/4",
-    "image": "https://featureassets.amuniversal.com/assets/b0e768f0963101395e72005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/02/4",
-    "published": "2026-09-02T12:04:00.000Z",
-    "title": "No caption 2026-09-02-4"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/02/3",
-    "image": "https://featureassets.amuniversal.com/assets/5f1222c0d8ba0137c959005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/02/3",
-    "published": "2026-09-02T12:03:00.000Z",
-    "title": "Dinosaur cranial capacity"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/02/2",
-    "image": "https://featureassets.amuniversal.com/assets/cd1e8e40cdd20137c56b005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/02/2",
-    "published": "2026-09-02T12:02:00.000Z",
-    "title": "No caption 2026-09-02-2"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/02/1",
-    "image": "https://featureassets.amuniversal.com/assets/c69d7640ea240137cfba005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/02/1",
-    "published": "2026-09-02T12:01:00.000Z",
-    "title": "\"Today, our guest lecturer is Dr. Clarence Tibbs, whose 20-year career has culminated in his recent autobiography, Zoo Vet I Quit!\""
   }
 ]
