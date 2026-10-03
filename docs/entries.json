@@ -1,5 +1,19 @@
 [
   {
+    "guid": "https://www.thefarside.com/2026/10/03/1",
+    "image": "https://featureassets.amuniversal.com/assets/2bc29890cdd40137c56b005056a9545d",
+    "link": "https://www.thefarside.com/2026/10/03/1",
+    "published": "2026-10-03T12:01:00.000Z",
+    "title": "\"My stomach? Your stomach's rumbling!\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/10/03/0",
+    "image": "https://featureassets.amuniversal.com/assets/da55c8b0d7400137c8a6005056a9545d",
+    "link": "https://www.thefarside.com/2026/10/03/0",
+    "published": "2026-10-03T12:00:00.000Z",
+    "title": "Custer's first stand"
+  },
+  {
     "guid": "https://www.thefarside.com/2026/10/02/4",
     "image": "https://featureassets.amuniversal.com/assets/dd737f60e8590137cedf005056a9545d",
     "link": "https://www.thefarside.com/2026/10/02/4",
@@ -684,19 +698,5 @@
     "link": "https://www.thefarside.com/2026/09/04/3",
     "published": "2026-09-04T12:03:00.000Z",
     "title": "No caption 2026-09-04-3"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/04/2",
-    "image": "https://featureassets.amuniversal.com/assets/7930cd50d8ba0137c959005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/04/2",
-    "published": "2026-09-04T12:02:00.000Z",
-    "title": "People who don't know which end is up"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/04/1",
-    "image": "https://featureassets.amuniversal.com/assets/c098a6f0cdd30137c56b005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/04/1",
-    "published": "2026-09-04T12:01:00.000Z",
-    "title": "No caption 2026-09-04-1"
   }
 ]
