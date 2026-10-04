@@ -1,5 +1,19 @@
 [
   {
+    "guid": "https://www.thefarside.com/2026/10/04/1",
+    "image": "https://featureassets.amuniversal.com/assets/822595f0cdd30137c56b005056a9545d",
+    "link": "https://www.thefarside.com/2026/10/04/1",
+    "published": "2026-10-04T12:01:00.000Z",
+    "title": "\"You moron! ... I told you it was only a mirage!\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/10/04/0",
+    "image": "https://featureassets.amuniversal.com/assets/2304d4e074330137a50b005056a9545d",
+    "link": "https://www.thefarside.com/2026/10/04/0",
+    "published": "2026-10-04T12:00:00.000Z",
+    "title": "Darrell suspected someone had once again slipped him a trick spoon with the concave side reversed."
+  },
+  {
     "guid": "https://www.thefarside.com/2026/10/03/1",
     "image": "https://featureassets.amuniversal.com/assets/2bc29890cdd40137c56b005056a9545d",
     "link": "https://www.thefarside.com/2026/10/03/1",
@@ -684,19 +698,5 @@
     "link": "https://www.thefarside.com/2026/09/05/0",
     "published": "2026-09-05T12:00:00.000Z",
     "title": "No caption 2026-09-05-0"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/04/4",
-    "image": "https://featureassets.amuniversal.com/assets/98153ba0e6f90137ce50005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/04/4",
-    "published": "2026-09-04T12:04:00.000Z",
-    "title": "The prenatal development of Curly"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/04/3",
-    "image": "https://featureassets.amuniversal.com/assets/d79d1940fa830137d52f005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/04/3",
-    "published": "2026-09-04T12:03:00.000Z",
-    "title": "No caption 2026-09-04-3"
   }
 ]
