@@ -1,5 +1,40 @@
 [
   {
+    "guid": "https://www.thefarside.com/2026/10/08/4",
+    "image": "https://featureassets.amuniversal.com/assets/8653be60cdd20137c56b005056a9545d",
+    "link": "https://www.thefarside.com/2026/10/08/4",
+    "published": "2026-10-08T12:04:00.000Z",
+    "title": "\"That does it! I'm going to go up there and give those people hell!\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/10/08/3",
+    "image": "https://featureassets.amuniversal.com/assets/9c2feb30d8b90137c959005056a9545d",
+    "link": "https://www.thefarside.com/2026/10/08/3",
+    "published": "2026-10-08T12:03:00.000Z",
+    "title": "No caption 2026-10-08-3"
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/10/08/2",
+    "image": "https://featureassets.amuniversal.com/assets/255ea800cdd30137c56b005056a9545d",
+    "link": "https://www.thefarside.com/2026/10/08/2",
+    "published": "2026-10-08T12:02:00.000Z",
+    "title": "\"And that goes for Lancelot, Galahad, and the rest of you guys no more stickin' your gum under the table.\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/10/08/1",
+    "image": "https://featureassets.amuniversal.com/assets/1f2443d0df120137cbaf005056a9545d",
+    "link": "https://www.thefarside.com/2026/10/08/1",
+    "published": "2026-10-08T12:01:00.000Z",
+    "title": "\"And here we are last summer going south. Wait a minute, Irene! We went north last summer! The stupid slide's in backwards!\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/10/08/0",
+    "image": "https://featureassets.amuniversal.com/assets/13150aa0cdd50137c56b005056a9545d",
+    "link": "https://www.thefarside.com/2026/10/08/0",
+    "published": "2026-10-08T12:00:00.000Z",
+    "title": "\"Okay, Pete! Start the pressure nice and easy.\""
+  },
+  {
     "guid": "https://www.thefarside.com/2026/10/07/4",
     "image": "https://featureassets.amuniversal.com/assets/4b49edd0e92e0137cf47005056a9545d",
     "link": "https://www.thefarside.com/2026/10/07/4",
@@ -663,40 +698,5 @@
     "link": "https://www.thefarside.com/2026/09/10/1",
     "published": "2026-09-10T12:01:00.000Z",
     "title": "\"As if we all knew where we're going.\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/10/0",
-    "image": "https://featureassets.amuniversal.com/assets/fbe8b0a0ea250137cfba005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/10/0",
-    "published": "2026-09-10T12:00:00.000Z",
-    "title": "The curse of mad scientist's block"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/09/4",
-    "image": "https://featureassets.amuniversal.com/assets/2085abe0d1a90137c692005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/09/4",
-    "published": "2026-09-09T12:04:00.000Z",
-    "title": "\"Those, sire, are the uncommon folk.\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/09/3",
-    "image": "https://featureassets.amuniversal.com/assets/85732810df110137cbaf005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/09/3",
-    "published": "2026-09-09T12:03:00.000Z",
-    "title": "When snakes dream they're crawling"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/09/2",
-    "image": "https://featureassets.amuniversal.com/assets/f4bac170ea240137cfba005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/09/2",
-    "published": "2026-09-09T12:02:00.000Z",
-    "title": "\"What? MacDougal is being promoted over me? Well, that does it! I won't take no orders from no stinkin' sodbuster!\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/09/1",
-    "image": "https://featureassets.amuniversal.com/assets/1763bae0e4860137cda5005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/09/1",
-    "published": "2026-09-09T12:01:00.000Z",
-    "title": "Scenes from the entomology underworld"
   }
 ]
