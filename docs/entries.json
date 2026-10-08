@@ -1,5 +1,40 @@
 [
   {
+    "guid": "https://www.thefarside.com/2026/10/07/4",
+    "image": "https://featureassets.amuniversal.com/assets/4b49edd0e92e0137cf47005056a9545d",
+    "link": "https://www.thefarside.com/2026/10/07/4",
+    "published": "2026-10-07T12:04:00.000Z",
+    "title": "Modern art critic"
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/10/07/3",
+    "image": "https://featureassets.amuniversal.com/assets/cff149a0cdd20137c56b005056a9545d",
+    "link": "https://www.thefarside.com/2026/10/07/3",
+    "published": "2026-10-07T12:03:00.000Z",
+    "title": "\"Okay on the count of three, everybody rattles.\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/10/07/2",
+    "image": "https://featureassets.amuniversal.com/assets/c70683e0ea250137cfba005056a9545d",
+    "link": "https://www.thefarside.com/2026/10/07/2",
+    "published": "2026-10-07T12:02:00.000Z",
+    "title": "At the Crabbiness Research Institute"
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/10/07/1",
+    "image": "https://featureassets.amuniversal.com/assets/7978e840e3ae0137cd49005056a9545d",
+    "link": "https://www.thefarside.com/2026/10/07/1",
+    "published": "2026-10-07T12:01:00.000Z",
+    "title": "\"Consider yourself fortunate, Belsky. As curses go, that sure beats having your descendants strangled in the night by a walking corpse.\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/10/07/0",
+    "image": "https://featureassets.amuniversal.com/assets/b68760d0e6f90137ce50005056a9545d",
+    "link": "https://www.thefarside.com/2026/10/07/0",
+    "published": "2026-10-07T12:00:00.000Z",
+    "title": "And with Johnny's revelation, Mr. Goodman's popularity in the neighborhood suddenly plummeted."
+  },
+  {
     "guid": "https://www.thefarside.com/2026/10/06/4",
     "image": "https://featureassets.amuniversal.com/assets/e9501400e9ee0137cf93005056a9545d",
     "link": "https://www.thefarside.com/2026/10/06/4",
@@ -663,40 +698,5 @@
     "link": "https://www.thefarside.com/2026/09/09/1",
     "published": "2026-09-09T12:01:00.000Z",
     "title": "Scenes from the entomology underworld"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/09/0",
-    "image": "https://featureassets.amuniversal.com/assets/1be46840d8ba0137c959005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/09/0",
-    "published": "2026-09-09T12:00:00.000Z",
-    "title": "\"For heaven's sake, Elroy! Now look where the earth is! Move over and let me drive!\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/08/4",
-    "image": "https://featureassets.amuniversal.com/assets/0d68db80e9ef0137cf93005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/08/4",
-    "published": "2026-09-08T12:04:00.000Z",
-    "title": "\"You must be new here! ... That's Miss Crutchfield, and she's there to make sure nobody runs with scissors.\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/08/3",
-    "image": "https://featureassets.amuniversal.com/assets/ac9b2d00fa830137d52f005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/08/3",
-    "published": "2026-09-08T12:03:00.000Z",
-    "title": "\"Say, honey didn't I meet you last night at the feeding frenzy?\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/08/2",
-    "image": "https://featureassets.amuniversal.com/assets/d9af8bf0d8b90137c959005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/08/2",
-    "published": "2026-09-08T12:02:00.000Z",
-    "title": "No caption 2026-09-08-2"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/08/1",
-    "image": "https://featureassets.amuniversal.com/assets/3e14bb10df100137cbaf005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/08/1",
-    "published": "2026-09-08T12:01:00.000Z",
-    "title": "\"I'm talking to you! You're so so so thick-membraned sometimes.\""
   }
 ]
