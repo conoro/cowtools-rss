@@ -1,5 +1,19 @@
 [
   {
+    "guid": "https://www.thefarside.com/2026/10/17/1",
+    "image": "https://featureassets.amuniversal.com/assets/81c5c860d8ba0137c959005056a9545d",
+    "link": "https://www.thefarside.com/2026/10/17/1",
+    "published": "2026-10-17T12:01:00.000Z",
+    "title": "\"My word, Frank sounds like you're coming down with one heck of a cold.\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/10/17/0",
+    "image": "https://featureassets.amuniversal.com/assets/4b0a7ce0d7420137c8a6005056a9545d",
+    "link": "https://www.thefarside.com/2026/10/17/0",
+    "published": "2026-10-17T12:00:00.000Z",
+    "title": "\"I see your little, petrified skull labeled and resting on a shelf somewhere.\""
+  },
+  {
     "guid": "https://www.thefarside.com/2026/10/16/4",
     "image": "https://featureassets.amuniversal.com/assets/dde395b0cdd20137c56b005056a9545d",
     "link": "https://www.thefarside.com/2026/10/16/4",
@@ -684,19 +698,5 @@
     "link": "https://www.thefarside.com/2026/09/11/3",
     "published": "2026-09-11T12:03:00.000Z",
     "title": "No caption 2026-09-11-3"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/11/2",
-    "image": "https://featureassets.amuniversal.com/assets/7af5c6d0ab71013963c4005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/11/2",
-    "published": "2026-09-11T12:02:00.000Z",
-    "title": "Ed and Barbara are visited by the insects of the Amazon Basin."
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/11/1",
-    "image": "https://featureassets.amuniversal.com/assets/49380b50e6f80137ce50005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/11/1",
-    "published": "2026-09-11T12:01:00.000Z",
-    "title": "\"My God! Vikings! And they mean business!\""
   }
 ]
