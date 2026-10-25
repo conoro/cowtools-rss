@@ -1,5 +1,19 @@
 [
   {
+    "guid": "https://www.thefarside.com/2026/10/25/1",
+    "image": "https://featureassets.amuniversal.com/assets/21385eb0e4860137cda5005056a9545d",
+    "link": "https://www.thefarside.com/2026/10/25/1",
+    "published": "2026-10-25T12:01:00.000Z",
+    "title": "Infamous moments in jazz"
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/10/25/0",
+    "image": "https://featureassets.amuniversal.com/assets/d60d6600d7410137c8a6005056a9545d",
+    "link": "https://www.thefarside.com/2026/10/25/0",
+    "published": "2026-10-25T12:00:00.000Z",
+    "title": "\"So then Sheila says to Betty that Arnold told her what Harry was up to, but Betty told me she already heard it from Blanche, don't you know \""
+  },
+  {
     "guid": "https://www.thefarside.com/2026/10/17/1",
     "image": "https://featureassets.amuniversal.com/assets/81c5c860d8ba0137c959005056a9545d",
     "link": "https://www.thefarside.com/2026/10/17/1",
@@ -684,19 +698,5 @@
     "link": "https://www.thefarside.com/2026/09/12/0",
     "published": "2026-09-12T12:00:00.000Z",
     "title": "\"Hey! Look at me, everybody! I'm a cowboy! Howdy, howdy, howdy!\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/11/4",
-    "image": "https://featureassets.amuniversal.com/assets/c97b8700fa830137d52f005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/11/4",
-    "published": "2026-09-11T12:04:00.000Z",
-    "title": "No caption 2026-09-11-4"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/11/3",
-    "image": "https://featureassets.amuniversal.com/assets/3c280570cdd70137c56b005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/11/3",
-    "published": "2026-09-11T12:03:00.000Z",
-    "title": "No caption 2026-09-11-3"
   }
 ]
