@@ -1,5 +1,40 @@
 [
   {
+    "guid": "https://www.thefarside.com/2026/10/28/4",
+    "image": "https://featureassets.amuniversal.com/assets/650cc0e0cdd20137c56b005056a9545d",
+    "link": "https://www.thefarside.com/2026/10/28/4",
+    "published": "2026-10-28T12:04:00.000Z",
+    "title": "\"Next!\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/10/28/3",
+    "image": "https://featureassets.amuniversal.com/assets/bdaafef0e4850137cda5005056a9545d",
+    "link": "https://www.thefarside.com/2026/10/28/3",
+    "published": "2026-10-28T12:03:00.000Z",
+    "title": "The untold ending of D. B. Cooper"
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/10/28/2",
+    "image": "https://featureassets.amuniversal.com/assets/991aa600cdd60137c56b005056a9545d",
+    "link": "https://www.thefarside.com/2026/10/28/2",
+    "published": "2026-10-28T12:02:00.000Z",
+    "title": "No caption 2026-10-28-2"
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/10/28/1",
+    "image": "https://featureassets.amuniversal.com/assets/bd340fa0ea240137cfba005056a9545d",
+    "link": "https://www.thefarside.com/2026/10/28/1",
+    "published": "2026-10-28T12:01:00.000Z",
+    "title": "Professor Ferrington and his controversial theory that dinosaurs were actually the discarded \"chicken\" bones of giant, alien picnickers."
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/10/28/0",
+    "image": "https://featureassets.amuniversal.com/assets/3c497910ea260137cfba005056a9545d",
+    "link": "https://www.thefarside.com/2026/10/28/0",
+    "published": "2026-10-28T12:00:00.000Z",
+    "title": "\"It's the only way to go, Frank. Why, my life's changed, ever since I discovered Stackable Livestock®.\""
+  },
+  {
     "guid": "https://www.thefarside.com/2026/10/25/1",
     "image": "https://featureassets.amuniversal.com/assets/21385eb0e4860137cda5005056a9545d",
     "link": "https://www.thefarside.com/2026/10/25/1",
@@ -663,40 +698,5 @@
     "link": "https://www.thefarside.com/2026/09/15/1",
     "published": "2026-09-15T12:01:00.000Z",
     "title": "Water buffaloes"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/15/0",
-    "image": "https://featureassets.amuniversal.com/assets/08255d80d7410137c8a6005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/15/0",
-    "published": "2026-09-15T12:00:00.000Z",
-    "title": "\"First!\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/13/1",
-    "image": "https://featureassets.amuniversal.com/assets/5dd5a8e0e9ef0137cf93005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/13/1",
-    "published": "2026-09-13T12:01:00.000Z",
-    "title": "Once again, Vernon has a good shirt ruined by a cheap pocket octopus."
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/13/0",
-    "image": "https://featureassets.amuniversal.com/assets/2161c9c0d7410137c8a6005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/13/0",
-    "published": "2026-09-13T12:00:00.000Z",
-    "title": "No caption 2026-09-13-0"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/12/1",
-    "image": "https://featureassets.amuniversal.com/assets/bc2b6c20dcc90137caaf005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/12/1",
-    "published": "2026-09-12T12:01:00.000Z",
-    "title": "\"Oh, look, Roger! Nerds! And some little nerdlings!\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/12/0",
-    "image": "https://featureassets.amuniversal.com/assets/8ed50ad0d7400137c8a6005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/12/0",
-    "published": "2026-09-12T12:00:00.000Z",
-    "title": "\"Hey! Look at me, everybody! I'm a cowboy! Howdy, howdy, howdy!\""
   }
 ]
