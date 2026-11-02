@@ -4,7 +4,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-import { scrapeComics, renderFeed, fetchComics, mergeEntries } from "./feed.js";
+import { scrapeComics, renderFeed, fetchComics, fetchBrowserComics, mergeEntries } from "./feed.js";
 
 function card({ index, image, caption, date = "2026/08/31" }) {
   return `
@@ -132,5 +132,73 @@ test("live: thefarside.com still yields unique, permalink-shaped entries", async
   assert.equal(new Set(found).size, found.length, "guids must be unique");
   for (const guid of found) {
     assert.match(guid, /^https:\/\/www\.thefarside\.com\/\d{4}\/\d{2}\/\d{2}\/\d+$/);
+  }
+});
+
+test("fetch retries a 403 or explicit challenge in the browser", async () => {
+  for (const response of [
+    new Response("challenge", { status: 403 }),
+    new Response("challenge", { headers: { "cdn-challenge": "true" } })
+  ]) {
+    let calls = 0;
+    const expected = scrapeComics(page);
+    const entries = await fetchComics({
+      fetchImpl: async () => response,
+      browserFetch: async () => { calls++; return expected; }
+    });
+    assert.equal(calls, 1);
+    assert.deepEqual(entries, expected);
+  }
+});
+
+test("fetch uses ordinary HTML without launching a browser", async () => {
+  const entries = await fetchComics({
+    fetchImpl: async () => new Response(page),
+    browserFetch: async () => assert.fail("browser should not launch")
+  });
+  assert.equal(entries.length, 3);
+});
+
+test("fetch fails on server errors, empty pages and a failed browser challenge", async () => {
+  for (const response of [new Response("unavailable", { status: 503 }), new Response("<html></html>")]) {
+    await assert.rejects(fetchComics({
+      fetchImpl: async () => response,
+      browserFetch: async () => assert.fail("browser should not launch")
+    }), /returned (503|no usable comics)/);
+  }
+  await assert.rejects(fetchComics({
+    fetchImpl: async () => new Response("challenge", { status: 403 }),
+    browserFetch: async () => { throw new Error("challenge still blocked"); }
+  }), /challenge still blocked/);
+});
+
+test("reads browser-loaded images after data-src is removed", () => {
+  assert.deepEqual(scrapeComics(page.replaceAll("data-src=", "src=").replaceAll('src="data:image/svg+xml,placeholder"', "")), scrapeComics(page));
+});
+
+test("browser closes after successful extraction and after a challenge timeout", async () => {
+  for (const blocked of [false, true]) {
+    let closed = false;
+    const fakePage = {
+      on() {},
+      async goto() {},
+      locator() {
+        return { first: () => ({ waitFor: async () => {
+          if (blocked) throw new Error("challenge timeout");
+        } }) };
+      },
+      async content() { return page; },
+      async title() { return "Establishing a secure connection ..."; }
+    };
+    const browserType = { launch: async () => ({
+      newPage: async () => fakePage,
+      close: async () => { closed = true; }
+    }) };
+    if (blocked) {
+      await assert.rejects(fetchBrowserComics({ browserType }), /Establishing a secure connection.*challenge timeout/);
+    } else {
+      assert.equal((await fetchBrowserComics({ browserType })).length, 3);
+    }
+    assert.equal(closed, true);
   }
 });

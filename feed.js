@@ -4,6 +4,7 @@
 
 import * as cheerio from 'cheerio';
 import RSS from 'rss';
+import { chromium } from 'playwright';
 
 const SITE = "https://www.thefarside.com";
 
@@ -59,8 +60,9 @@ export function scrapeComics(html) {
 
   $(".tfs-comic").each(function (position) {
     const card = $(this);
-    const image = card.find(".tfs-comic__image img").attr("data-src");
-    if (!image || image.includes(ERROR_IMAGE)) return;
+    const img = card.find(".tfs-comic__image img");
+    const image = img.attr("data-src") || img.attr("src");
+    if (!image || image.startsWith("data:") || image.includes(ERROR_IMAGE)) return;
 
     const permalink =
       card.find("[data-likable-permalink]").attr("data-likable-permalink") ||
@@ -154,8 +156,46 @@ export function renderFeed(entries) {
   return feed.xml();
 }
 
-export async function fetchComics() {
-  const response = await fetch(SITE, { headers: { "user-agent": USER_AGENT } });
+export async function fetchBrowserComics({ browserType = chromium } = {}) {
+  // Use full Chromium: the separate headless shell stayed stuck on Bunny Shield
+  // in live testing, while full Chromium loaded the comics successfully.
+  const browser = await browserType.launch({ channel: "chromium", headless: true });
+  let page;
+  let status;
+  try {
+    page = await browser.newPage();
+    page.on("response", (response) => {
+      if (response.request().isNavigationRequest() && response.frame() === page.mainFrame()) {
+        status = response.status();
+      }
+    });
+    // A 403 challenge is a usable document: let its JavaScript run and navigate.
+    await page.goto(SITE, { waitUntil: "domcontentloaded", timeout: 30000 });
+    await page.locator(".tfs-comic .tfs-comic__image img").first()
+      .waitFor({ state: "attached", timeout: 60000 });
+    const entries = scrapeComics(await page.content());
+    if (!entries.length) throw new Error("page contained no usable comics");
+    return entries;
+  } catch (error) {
+    const title = page ? await page.title().catch(() => "unavailable") : "unavailable";
+    throw new Error(`Browser fetch failed (HTTP ${status ?? "unknown"}, page: ${title}): ${error.message}`, { cause: error });
+  } finally {
+    await browser.close();
+  }
+}
+
+export async function fetchComics({ fetchImpl = fetch, browserFetch = fetchBrowserComics } = {}) {
+  const response = await fetchImpl(SITE, {
+    headers: { "user-agent": USER_AGENT },
+    signal: AbortSignal.timeout(30000)
+  });
+  if (response.status === 403 || response.headers.get("cdn-challenge") === "true") {
+    await response.body?.cancel();
+    console.log(`HTTP ${response.status}: retrying with Chromium to allow the browser challenge to complete`);
+    return browserFetch();
+  }
   if (!response.ok) throw new Error(`${SITE} returned ${response.status}`);
-  return scrapeComics(await response.text());
+  const entries = scrapeComics(await response.text());
+  if (!entries.length) throw new Error(`${SITE} returned no usable comics`);
+  return entries;
 }

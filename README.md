@@ -23,6 +23,7 @@ content-addressed and carry no signature or expiry, so they stay good indefinite
 
 ```bash
 npm install
+npx playwright install chromium
 npm test      # fixture tests plus a live check against thefarside.com
 npm run build # writes docs/entries.json and docs/feed.xml
 ```
@@ -34,6 +35,13 @@ branch**, and pick `master` / `/docs`.
 
 The workflow needs no secrets. It runs at 09:00 and 21:00 UTC and can be triggered by
 hand from the Actions tab.
+
+If the site returns a 403 or a Bunny Shield challenge, the scraper retries in
+Playwright Chromium so the challenge's JavaScript can run. It waits up to 60 seconds
+for comic markup after navigation. If the browser remains blocked or no usable comics
+are found, the build fails and leaves the existing feed intact. Failure logs include
+the browser page title and last navigation status. GitHub Actions installs Chromium
+and its system dependencies automatically.
 
 > Scheduled workflows are disabled after 60 days without a commit to the repository.
 > This one commits whenever the feed changes, which is most days, so it should keep
