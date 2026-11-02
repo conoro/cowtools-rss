@@ -1,5 +1,19 @@
 [
   {
+    "guid": "https://www.thefarside.com/2026/11/01/1",
+    "image": "https://featureassets.amuniversal.com/assets/8a9d14a0cdd20137c56b005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/01/1",
+    "published": "2026-11-01T12:01:00.000Z",
+    "title": "\"‘H,' please for both of us.\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/01/0",
+    "image": "https://featureassets.amuniversal.com/assets/a6325210fa850137d52f005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/01/0",
+    "published": "2026-11-01T12:00:00.000Z",
+    "title": "Kids' shows that bombed"
+  },
+  {
     "guid": "https://www.thefarside.com/2026/10/28/4",
     "image": "https://featureassets.amuniversal.com/assets/650cc0e0cdd20137c56b005056a9545d",
     "link": "https://www.thefarside.com/2026/10/28/4",
@@ -684,19 +698,5 @@
     "link": "https://www.thefarside.com/2026/09/15/3",
     "published": "2026-09-15T12:03:00.000Z",
     "title": "No caption 2026-09-15-3"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/15/2",
-    "image": "https://featureassets.amuniversal.com/assets/32cae4c0fa850137d52f005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/15/2",
-    "published": "2026-09-15T12:02:00.000Z",
-    "title": "Becoming a rogue in his later years, Dumbo terrorized the world's flyways."
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/15/1",
-    "image": "https://featureassets.amuniversal.com/assets/a8ede510d8b90137c959005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/15/1",
-    "published": "2026-09-15T12:01:00.000Z",
-    "title": "Water buffaloes"
   }
 ]
