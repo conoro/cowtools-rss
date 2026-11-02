@@ -159,7 +159,10 @@ export function renderFeed(entries) {
 export async function fetchBrowserComics({ browserType = chromium } = {}) {
   // Use full Chromium: the separate headless shell stayed stuck on Bunny Shield
   // in live testing, while full Chromium loaded the comics successfully.
-  const browser = await browserType.launch({ channel: "chromium", headless: true });
+  const browser = await browserType.launch({
+    channel: "chromium",
+    headless: process.env.BROWSER_HEADLESS !== "false"
+  });
   let page;
   let status;
   try {

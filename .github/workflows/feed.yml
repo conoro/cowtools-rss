@@ -31,7 +31,9 @@ jobs:
 
       - run: npx playwright install --with-deps chromium
 
-      - run: node build.mjs
+      - run: xvfb-run --auto-servernum node build.mjs
+        env:
+          BROWSER_HEADLESS: "false"
 
       - name: Commit the feed
         run: |

@@ -42,6 +42,8 @@ for comic markup after navigation. If the browser remains blocked or no usable c
 are found, the build fails and leaves the existing feed intact. Failure logs include
 the browser page title and last navigation status. GitHub Actions installs Chromium
 and its system dependencies automatically.
+The workflow runs headed Chromium under Xvfb; local runs default to headless.
+Set `BROWSER_HEADLESS=false` to use a visible browser locally.
 
 > Scheduled workflows are disabled after 60 days without a commit to the repository.
 > This one commits whenever the feed changes, which is most days, so it should keep
