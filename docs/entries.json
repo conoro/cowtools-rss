@@ -1,5 +1,40 @@
 [
   {
+    "guid": "https://www.thefarside.com/2026/11/03/4",
+    "image": "https://featureassets.amuniversal.com/assets/80255140cdd20137c56b005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/03/4",
+    "published": "2026-11-03T12:04:00.000Z",
+    "title": "\"I told you to watch for bones.\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/03/3",
+    "image": "https://featureassets.amuniversal.com/assets/e4936750cdd40137c56b005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/03/3",
+    "published": "2026-11-03T12:03:00.000Z",
+    "title": "\"Well, well. The great hunter returneth.\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/03/2",
+    "image": "https://featureassets.amuniversal.com/assets/1ed7f700df110137cbaf005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/03/2",
+    "published": "2026-11-03T12:02:00.000Z",
+    "title": "\"Just a word of warning, Myron if you miss, I'm comin' after your big hazel.\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/03/1",
+    "image": "https://featureassets.amuniversal.com/assets/5e4868c0e92f0137cf47005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/03/1",
+    "published": "2026-11-03T12:01:00.000Z",
+    "title": "\"Now, moving on from the so-called funny bone, we come to this little guy and you tickle him at your own peril.\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/03/0",
+    "image": "https://featureassets.amuniversal.com/assets/8057a8d0e92d0137cf47005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/03/0",
+    "published": "2026-11-03T12:00:00.000Z",
+    "title": "In the corridors of Clowngress"
+  },
+  {
     "guid": "https://www.thefarside.com/2026/11/02/4",
     "image": "https://featureassets.amuniversal.com/assets/936c0330cdd50137c56b005056a9545d",
     "link": "https://www.thefarside.com/2026/11/02/4",
@@ -663,40 +698,5 @@
     "link": "https://www.thefarside.com/2026/09/17/3",
     "published": "2026-09-17T12:03:00.000Z",
     "title": "\"Now now, Billy. How could you have seen a monster if you can't even describe him?\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/17/2",
-    "image": "https://featureassets.amuniversal.com/assets/ca573700cdd20137c56b005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/17/2",
-    "published": "2026-09-17T12:02:00.000Z",
-    "title": "No caption 2026-09-17-2"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/17/1",
-    "image": "https://featureassets.amuniversal.com/assets/3c019c80a61b01396268005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/17/1",
-    "published": "2026-09-17T12:01:00.000Z",
-    "title": "Pet tricks on other planets"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/17/0",
-    "image": "https://featureassets.amuniversal.com/assets/d02960e0dcca0137caaf005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/17/0",
-    "published": "2026-09-17T12:00:00.000Z",
-    "title": "\"Cummings! Schneider! You've got plenty of research to work on and for the last time, stop playing with those plastic models!\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/16/4",
-    "image": "https://featureassets.amuniversal.com/assets/63c4baf0ab71013963c4005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/16/4",
-    "published": "2026-09-16T12:04:00.000Z",
-    "title": "No caption 2026-09-16-4"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/16/3",
-    "image": "https://featureassets.amuniversal.com/assets/04c4b9e0fa860137d52f005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/16/3",
-    "published": "2026-09-16T12:03:00.000Z",
-    "title": "No caption 2026-09-16-3"
   }
 ]
