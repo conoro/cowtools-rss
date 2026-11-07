@@ -1,5 +1,19 @@
 [
   {
+    "guid": "https://www.thefarside.com/2026/11/07/1",
+    "image": "https://featureassets.amuniversal.com/assets/97b9d1d0e3ad0137cd49005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/07/1",
+    "published": "2026-11-07T12:01:00.000Z",
+    "title": "Nov. 12, 1957: Kevin Wakefield, during snack time, makes kindergarten history by selecting the soda cracker over the graham."
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/07/0",
+    "image": "https://featureassets.amuniversal.com/assets/165e3740d8ba0137c959005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/07/0",
+    "published": "2026-11-07T12:00:00.000Z",
+    "title": "\"Okay! I'll talk! I'll talk! Take two sticks of approximately equal size and weight rub them together at opposing angles using short, brisk strokes \""
+  },
+  {
     "guid": "https://www.thefarside.com/2026/11/06/4",
     "image": "https://featureassets.amuniversal.com/assets/80203400e92f0137cf47005056a9545d",
     "link": "https://www.thefarside.com/2026/11/06/4",
@@ -684,19 +698,5 @@
     "link": "https://www.thefarside.com/2026/09/24/1",
     "published": "2026-09-24T12:01:00.000Z",
     "title": "\"And don't give me that ‘I'm only bird-watching' line.\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/24/0",
-    "image": "https://featureassets.amuniversal.com/assets/240fcfe0cdd60137c56b005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/24/0",
-    "published": "2026-09-24T12:00:00.000Z",
-    "title": "No caption 2026-09-24-0"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/22/4",
-    "image": "https://featureassets.amuniversal.com/assets/6cf6e6a0dcca0137caaf005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/22/4",
-    "published": "2026-09-22T12:04:00.000Z",
-    "title": "No caption 2026-09-22-4"
   }
 ]
