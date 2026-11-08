@@ -1,5 +1,19 @@
 [
   {
+    "guid": "https://www.thefarside.com/2026/11/08/1",
+    "image": "https://featureassets.amuniversal.com/assets/0efd3c40dcc90137caaf005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/08/1",
+    "published": "2026-11-08T12:01:00.000Z",
+    "title": "When snakes trip"
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/08/0",
+    "image": "https://featureassets.amuniversal.com/assets/89cc9ec0e6f90137ce50005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/08/0",
+    "published": "2026-11-08T12:00:00.000Z",
+    "title": "Buffalo, N.Y., Nov. 2-5: The annual convention of the Big Galoot Society of America"
+  },
+  {
     "guid": "https://www.thefarside.com/2026/11/07/1",
     "image": "https://featureassets.amuniversal.com/assets/97b9d1d0e3ad0137cd49005056a9545d",
     "link": "https://www.thefarside.com/2026/11/07/1",
@@ -684,19 +698,5 @@
     "link": "https://www.thefarside.com/2026/09/24/3",
     "published": "2026-09-24T12:03:00.000Z",
     "title": "\"You ever do this? Just sit in a place like this and antwatch?\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/24/2",
-    "image": "https://featureassets.amuniversal.com/assets/b25f3540e9ef0137cf93005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/24/2",
-    "published": "2026-09-24T12:02:00.000Z",
-    "title": "\"Listen up, my Cossack brethren! We'll ride into the valley like the wind, the thunder of our horses and the lightning of our steel striking fear in the hearts of our enemies! And remember stay out of Mrs. Caldwell's garden!\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/24/1",
-    "image": "https://featureassets.amuniversal.com/assets/7142bef0dcc90137caaf005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/24/1",
-    "published": "2026-09-24T12:01:00.000Z",
-    "title": "\"And don't give me that ‘I'm only bird-watching' line.\""
   }
 ]
