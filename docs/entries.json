@@ -1,5 +1,40 @@
 [
   {
+    "guid": "https://www.thefarside.com/2026/11/11/4",
+    "image": "https://featureassets.amuniversal.com/assets/8fd967d0d8bb0137c959005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/11/4",
+    "published": "2026-11-11T12:04:00.000Z",
+    "title": "\"Let's see here. Oh! Close, but no cigar. You want the place up the road same as I told those other fellahs.\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/11/3",
+    "image": "https://featureassets.amuniversal.com/assets/0ca3ce20dccb0137caaf005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/11/3",
+    "published": "2026-11-11T12:03:00.000Z",
+    "title": "Punk porcupines"
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/11/2",
+    "image": "https://featureassets.amuniversal.com/assets/de4bfbc0cdd40137c56b005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/11/2",
+    "published": "2026-11-11T12:02:00.000Z",
+    "title": "\"Don't be alarmed, folks he's completely harmless unless something startles him.\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/11/1",
+    "image": "https://featureassets.amuniversal.com/assets/390a53f0cdd50137c56b005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/11/1",
+    "published": "2026-11-11T12:01:00.000Z",
+    "title": "\"And, as you shall soon observe, we are quite proud of our test tube baby progress.\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/11/0",
+    "image": "https://featureassets.amuniversal.com/assets/d8a7c1e0e4790137cd9d005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/11/0",
+    "published": "2026-11-11T12:00:00.000Z",
+    "title": "Gargoyle socks"
+  },
+  {
     "guid": "https://www.thefarside.com/2026/11/10/4",
     "image": "https://featureassets.amuniversal.com/assets/4e78b870d8bb0137c959005056a9545d",
     "link": "https://www.thefarside.com/2026/11/10/4",
@@ -663,40 +698,5 @@
     "link": "https://www.thefarside.com/2026/09/28/4",
     "published": "2026-09-28T12:04:00.000Z",
     "title": "No caption 2026-09-28-4"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/28/3",
-    "image": "https://featureassets.amuniversal.com/assets/2fda5ab0ea260137cfba005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/28/3",
-    "published": "2026-09-28T12:03:00.000Z",
-    "title": "Professor Wainwright's painstaking field research to decode the language of bears comes to a sudden and horrific end."
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/28/2",
-    "image": "https://featureassets.amuniversal.com/assets/19333460cdd40137c56b005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/28/2",
-    "published": "2026-09-28T12:02:00.000Z",
-    "title": "\"Oh, Mrs. Oswald ... you've forgotten something again.\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/28/1",
-    "image": "https://featureassets.amuniversal.com/assets/84b2ecd0cdd20137c56b005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/28/1",
-    "published": "2026-09-28T12:01:00.000Z",
-    "title": "\"He bit the Godfather.\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/28/0",
-    "image": "https://featureassets.amuniversal.com/assets/081d899002810138d7bb005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/28/0",
-    "published": "2026-09-28T12:00:00.000Z",
-    "title": "\"C'mon, c'mon it's either one or the other.\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/27/1",
-    "image": "https://featureassets.amuniversal.com/assets/b7375ab0fa850137d52f005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/27/1",
-    "published": "2026-09-27T12:01:00.000Z",
-    "title": "God at His computer"
   }
 ]
