@@ -1,5 +1,40 @@
 [
   {
+    "guid": "https://www.thefarside.com/2026/11/13/4",
+    "image": "https://featureassets.amuniversal.com/assets/9d90b5e0e3ae0137cd49005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/13/4",
+    "published": "2026-11-13T12:04:00.000Z",
+    "title": "The bribe of Frankenstein"
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/13/3",
+    "image": "https://featureassets.amuniversal.com/assets/d54be720e3ad0137cd49005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/13/3",
+    "published": "2026-11-13T12:03:00.000Z",
+    "title": "And for the rest of his life, the young reptile suffered deep emotional scars."
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/13/2",
+    "image": "https://featureassets.amuniversal.com/assets/dbe6d060d7410137c8a6005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/13/2",
+    "published": "2026-11-13T12:02:00.000Z",
+    "title": "Museums of the future"
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/13/1",
+    "image": "https://featureassets.amuniversal.com/assets/f8bc2440dcc90137caaf005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/13/1",
+    "published": "2026-11-13T12:01:00.000Z",
+    "title": "\"Look out, Thak! It's a a Dang! Never can pronounce those things!\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/13/0",
+    "image": "https://featureassets.amuniversal.com/assets/5b7024f0e85c0137cedf005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/13/0",
+    "published": "2026-11-13T12:00:00.000Z",
+    "title": "\"Got him, Byron! It's something in the Vespula genus, all right and ooooweeeee does he look mad!\""
+  },
+  {
     "guid": "https://www.thefarside.com/2026/11/12/4",
     "image": "https://featureassets.amuniversal.com/assets/e49aaac0ea250137cfba005056a9545d",
     "link": "https://www.thefarside.com/2026/11/12/4",
@@ -663,40 +698,5 @@
     "link": "https://www.thefarside.com/2026/09/30/4",
     "published": "2026-09-30T12:04:00.000Z",
     "title": "\"Uh-oh, Ruby. ... The apartment downstairs is awfully quiet.\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/30/3",
-    "image": "https://featureassets.amuniversal.com/assets/90033170e4780137cd9d005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/30/3",
-    "published": "2026-09-30T12:03:00.000Z",
-    "title": "\"Okay, you've passed the fire test, the riding test, and the combat test but now, paleface, now you must say ‘toy boat' three times real fast!\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/30/2",
-    "image": "https://featureassets.amuniversal.com/assets/705a46f0e6f80137ce50005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/30/2",
-    "published": "2026-09-30T12:02:00.000Z",
-    "title": "\"On three, Vince. Ready?\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/30/1",
-    "image": "https://featureassets.amuniversal.com/assets/40fc72e0fa840137d52f005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/30/1",
-    "published": "2026-09-30T12:01:00.000Z",
-    "title": "Paramecium humor"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/30/0",
-    "image": "https://featureassets.amuniversal.com/assets/40760810e6f80137ce50005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/30/0",
-    "published": "2026-09-30T12:00:00.000Z",
-    "title": "\"Oh, yeah? Lewis, you're fired! You apparently forgot this is a cartoon, and I can read every word you think!\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/29/4",
-    "image": "https://featureassets.amuniversal.com/assets/04585120cdd30137c56b005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/29/4",
-    "published": "2026-09-29T12:04:00.000Z",
-    "title": "\"And the last gladiator left alive will win the contest. But first the egg-toss!\""
   }
 ]
