@@ -1,5 +1,19 @@
 [
   {
+    "guid": "https://www.thefarside.com/2026/11/14/1",
+    "image": "https://featureassets.amuniversal.com/assets/c03b0bf0d7410137c8a6005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/14/1",
+    "published": "2026-11-14T12:01:00.000Z",
+    "title": "No caption 2026-11-14-1"
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/14/0",
+    "image": "https://featureassets.amuniversal.com/assets/43123210e3af0137cd49005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/14/0",
+    "published": "2026-11-14T12:00:00.000Z",
+    "title": "\"No doubt about it, boys. See these markings on the bottom? This is an Apache pie pan!\""
+  },
+  {
     "guid": "https://www.thefarside.com/2026/11/13/4",
     "image": "https://featureassets.amuniversal.com/assets/9d90b5e0e3ae0137cd49005056a9545d",
     "link": "https://www.thefarside.com/2026/11/13/4",
@@ -684,19 +698,5 @@
     "link": "https://www.thefarside.com/2026/10/01/1",
     "published": "2026-10-01T12:01:00.000Z",
     "title": "Across town in the snake district"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/10/01/0",
-    "image": "https://featureassets.amuniversal.com/assets/9d1a9800e9ef0137cf93005056a9545d",
-    "link": "https://www.thefarside.com/2026/10/01/0",
-    "published": "2026-10-01T12:00:00.000Z",
-    "title": "Summoned by the gonging, Professor Crutchfeld stepped into the clearing. The little caterpillars had done well this time in their offering."
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/09/30/4",
-    "image": "https://featureassets.amuniversal.com/assets/503ecb50d8ba0137c959005056a9545d",
-    "link": "https://www.thefarside.com/2026/09/30/4",
-    "published": "2026-09-30T12:04:00.000Z",
-    "title": "\"Uh-oh, Ruby. ... The apartment downstairs is awfully quiet.\""
   }
 ]
