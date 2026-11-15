@@ -1,5 +1,19 @@
 [
   {
+    "guid": "https://www.thefarside.com/2026/11/15/1",
+    "image": "https://featureassets.amuniversal.com/assets/1a9d11e0d0f70137c652005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/15/1",
+    "published": "2026-11-15T12:01:00.000Z",
+    "title": "School for the Mechanically Declined"
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/15/0",
+    "image": "https://featureassets.amuniversal.com/assets/3afa56b0e85b0137cedf005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/15/0",
+    "published": "2026-11-15T12:00:00.000Z",
+    "title": "\"... And please let Mom, Dad, Rex, Ginger, Tucker, me, and all the rest of the family see color.\""
+  },
+  {
     "guid": "https://www.thefarside.com/2026/11/14/1",
     "image": "https://featureassets.amuniversal.com/assets/c03b0bf0d7410137c8a6005056a9545d",
     "link": "https://www.thefarside.com/2026/11/14/1",
@@ -684,19 +698,5 @@
     "link": "https://www.thefarside.com/2026/10/01/3",
     "published": "2026-10-01T12:03:00.000Z",
     "title": "\"Big Bob says he's getting tired of you saying he doesn't really exist.\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/10/01/2",
-    "image": "https://featureassets.amuniversal.com/assets/245d4740d35f0137c76e005056a9545d",
-    "link": "https://www.thefarside.com/2026/10/01/2",
-    "published": "2026-10-01T12:02:00.000Z",
-    "title": "The origin of clothes"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/10/01/1",
-    "image": "https://featureassets.amuniversal.com/assets/9df1d690df0f0137cbaf005056a9545d",
-    "link": "https://www.thefarside.com/2026/10/01/1",
-    "published": "2026-10-01T12:01:00.000Z",
-    "title": "Across town in the snake district"
   }
 ]
