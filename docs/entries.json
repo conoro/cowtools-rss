@@ -1,5 +1,40 @@
 [
   {
+    "guid": "https://www.thefarside.com/2026/11/19/4",
+    "image": "https://featureassets.amuniversal.com/assets/43bffa90e92e0137cf47005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/19/4",
+    "published": "2026-11-19T12:04:00.000Z",
+    "title": "Beeswax lunches"
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/19/3",
+    "image": "https://featureassets.amuniversal.com/assets/30e5bef0e3ae0137cd49005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/19/3",
+    "published": "2026-11-19T12:03:00.000Z",
+    "title": "\"Make your move, Bart if you're feelin' lucky, that is.\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/19/2",
+    "image": "https://featureassets.amuniversal.com/assets/f27b1060e9ef0137cf93005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/19/2",
+    "published": "2026-11-19T12:02:00.000Z",
+    "title": "It was no place for yellow squash."
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/19/1",
+    "image": "https://featureassets.amuniversal.com/assets/71fe3b90cdd20137c56b005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/19/1",
+    "published": "2026-11-19T12:01:00.000Z",
+    "title": "No caption 2026-11-19-1"
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/19/0",
+    "image": "https://featureassets.amuniversal.com/assets/39d9cdb0fa850137d52f005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/19/0",
+    "published": "2026-11-19T12:00:00.000Z",
+    "title": "\"Bobby, please jiggle Grandpa's rat so it looks alive.\""
+  },
+  {
     "guid": "https://www.thefarside.com/2026/11/18/4",
     "image": "https://featureassets.amuniversal.com/assets/2b007360cdd70137c56b005056a9545d",
     "link": "https://www.thefarside.com/2026/11/18/4",
@@ -663,40 +698,5 @@
     "link": "https://www.thefarside.com/2026/10/07/4",
     "published": "2026-10-07T12:04:00.000Z",
     "title": "Modern art critic"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/10/07/3",
-    "image": "https://featureassets.amuniversal.com/assets/cff149a0cdd20137c56b005056a9545d",
-    "link": "https://www.thefarside.com/2026/10/07/3",
-    "published": "2026-10-07T12:03:00.000Z",
-    "title": "\"Okay on the count of three, everybody rattles.\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/10/07/2",
-    "image": "https://featureassets.amuniversal.com/assets/c70683e0ea250137cfba005056a9545d",
-    "link": "https://www.thefarside.com/2026/10/07/2",
-    "published": "2026-10-07T12:02:00.000Z",
-    "title": "At the Crabbiness Research Institute"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/10/07/1",
-    "image": "https://featureassets.amuniversal.com/assets/7978e840e3ae0137cd49005056a9545d",
-    "link": "https://www.thefarside.com/2026/10/07/1",
-    "published": "2026-10-07T12:01:00.000Z",
-    "title": "\"Consider yourself fortunate, Belsky. As curses go, that sure beats having your descendants strangled in the night by a walking corpse.\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/10/07/0",
-    "image": "https://featureassets.amuniversal.com/assets/b68760d0e6f90137ce50005056a9545d",
-    "link": "https://www.thefarside.com/2026/10/07/0",
-    "published": "2026-10-07T12:00:00.000Z",
-    "title": "And with Johnny's revelation, Mr. Goodman's popularity in the neighborhood suddenly plummeted."
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/10/06/4",
-    "image": "https://featureassets.amuniversal.com/assets/e9501400e9ee0137cf93005056a9545d",
-    "link": "https://www.thefarside.com/2026/10/06/4",
-    "published": "2026-10-06T12:04:00.000Z",
-    "title": "The Shaolin School of Plumbing"
   }
 ]
