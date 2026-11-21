@@ -1,5 +1,19 @@
 [
   {
+    "guid": "https://www.thefarside.com/2026/11/21/1",
+    "image": "https://featureassets.amuniversal.com/assets/0fda1900cdd50137c56b005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/21/1",
+    "published": "2026-11-21T12:01:00.000Z",
+    "title": "\"Reuben! The Johnsons are here! You come up this instant ... or I'll get the hose!\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/21/0",
+    "image": "https://featureassets.amuniversal.com/assets/e499f3c0dcca0137caaf005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/21/0",
+    "published": "2026-11-21T12:00:00.000Z",
+    "title": "French mammoth"
+  },
+  {
     "guid": "https://www.thefarside.com/2026/11/20/4",
     "image": "https://featureassets.amuniversal.com/assets/1aac660002820138d7bb005056a9545d",
     "link": "https://www.thefarside.com/2026/11/20/4",
@@ -684,19 +698,5 @@
     "link": "https://www.thefarside.com/2026/10/16/1",
     "published": "2026-10-16T12:01:00.000Z",
     "title": "\"Hey! C'mon! Hold it! Hold it! ... Or someone's gonna get hurt!\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/10/16/0",
-    "image": "https://featureassets.amuniversal.com/assets/ce03fb80df100137cbaf005056a9545d",
-    "link": "https://www.thefarside.com/2026/10/16/0",
-    "published": "2026-10-16T12:00:00.000Z",
-    "title": "\"Egad! Willard's home early! Don't move his vision's not very good, but his sense of smell and hearing are quite acute.\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/10/08/4",
-    "image": "https://featureassets.amuniversal.com/assets/8653be60cdd20137c56b005056a9545d",
-    "link": "https://www.thefarside.com/2026/10/08/4",
-    "published": "2026-10-08T12:04:00.000Z",
-    "title": "\"That does it! I'm going to go up there and give those people hell!\""
   }
 ]
