@@ -1,5 +1,40 @@
 [
   {
+    "guid": "https://www.thefarside.com/2026/11/23/4",
+    "image": "https://featureassets.amuniversal.com/assets/f989a310e3ae0137cd49005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/23/4",
+    "published": "2026-11-23T12:04:00.000Z",
+    "title": "Eskimo restaurants"
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/23/3",
+    "image": "https://featureassets.amuniversal.com/assets/b2b45c50e6f80137ce50005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/23/3",
+    "published": "2026-11-23T12:03:00.000Z",
+    "title": "After flicking on the light, Professor Zurkowitz is caught off guard by the overnight success of his efforts to crossbreed flying fish and piranhas."
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/23/2",
+    "image": "https://featureassets.amuniversal.com/assets/b653bfa0e4860137cda5005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/23/2",
+    "published": "2026-11-23T12:02:00.000Z",
+    "title": "Animal toughs and their hangouts"
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/23/1",
+    "image": "https://featureassets.amuniversal.com/assets/f606f6a0e4850137cda5005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/23/1",
+    "published": "2026-11-23T12:01:00.000Z",
+    "title": "Babette's Botulism: The Sequel"
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/23/0",
+    "image": "https://featureassets.amuniversal.com/assets/d07264b0cdd30137c56b005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/23/0",
+    "published": "2026-11-23T12:00:00.000Z",
+    "title": "\"Well, we both knew there'd be some adjustments moving from a small town to a big city.\""
+  },
+  {
     "guid": "https://www.thefarside.com/2026/11/22/1",
     "image": "https://featureassets.amuniversal.com/assets/90e41430e6f80137ce50005056a9545d",
     "link": "https://www.thefarside.com/2026/11/22/1",
@@ -663,40 +698,5 @@
     "link": "https://www.thefarside.com/2026/10/25/1",
     "published": "2026-10-25T12:01:00.000Z",
     "title": "Infamous moments in jazz"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/10/25/0",
-    "image": "https://featureassets.amuniversal.com/assets/d60d6600d7410137c8a6005056a9545d",
-    "link": "https://www.thefarside.com/2026/10/25/0",
-    "published": "2026-10-25T12:00:00.000Z",
-    "title": "\"So then Sheila says to Betty that Arnold told her what Harry was up to, but Betty told me she already heard it from Blanche, don't you know \""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/10/17/1",
-    "image": "https://featureassets.amuniversal.com/assets/81c5c860d8ba0137c959005056a9545d",
-    "link": "https://www.thefarside.com/2026/10/17/1",
-    "published": "2026-10-17T12:01:00.000Z",
-    "title": "\"My word, Frank sounds like you're coming down with one heck of a cold.\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/10/17/0",
-    "image": "https://featureassets.amuniversal.com/assets/4b0a7ce0d7420137c8a6005056a9545d",
-    "link": "https://www.thefarside.com/2026/10/17/0",
-    "published": "2026-10-17T12:00:00.000Z",
-    "title": "\"I see your little, petrified skull labeled and resting on a shelf somewhere.\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/10/16/4",
-    "image": "https://featureassets.amuniversal.com/assets/dde395b0cdd20137c56b005056a9545d",
-    "link": "https://www.thefarside.com/2026/10/16/4",
-    "published": "2026-10-16T12:04:00.000Z",
-    "title": "\"And remember ask not what your anthill can do for you, but what you can do for your anthill.\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/10/16/3",
-    "image": "https://featureassets.amuniversal.com/assets/c111d1a0e9ef0137cf93005056a9545d",
-    "link": "https://www.thefarside.com/2026/10/16/3",
-    "published": "2026-10-16T12:03:00.000Z",
-    "title": "Raymond's last day as the band's sound technician."
   }
 ]
