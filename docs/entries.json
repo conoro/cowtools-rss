@@ -1,5 +1,40 @@
 [
   {
+    "guid": "https://www.thefarside.com/2026/11/25/4",
+    "image": "https://featureassets.amuniversal.com/assets/ee45a86758c311ea8bf6005056a9",
+    "link": "https://www.thefarside.com/2026/11/25/4",
+    "published": "2026-11-25T12:04:00.000Z",
+    "title": "\"You have to prime it, you know.\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/25/3",
+    "image": "https://featureassets.amuniversal.com/assets/ee46120858c311ea8bf6005056a9",
+    "link": "https://www.thefarside.com/2026/11/25/3",
+    "published": "2026-11-25T12:03:00.000Z",
+    "title": "\"Holy cow! What's gotten into our La-Z-Boy?\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/25/2",
+    "image": "https://featureassets.amuniversal.com/assets/0660d450e4870137cda5005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/25/2",
+    "published": "2026-11-25T12:02:00.000Z",
+    "title": "No caption 2026-11-25-2"
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/25/1",
+    "image": "https://featureassets.amuniversal.com/assets/7b4f10e0e4860137cda5005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/25/1",
+    "published": "2026-11-25T12:01:00.000Z",
+    "title": "No caption 2026-11-25-1"
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/25/0",
+    "image": "https://featureassets.amuniversal.com/assets/29f454d0e6f90137ce50005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/25/0",
+    "published": "2026-11-25T12:00:00.000Z",
+    "title": "\"You're in luck! This place just came on the market a few days ago. The previous owners had their heads chopped off.\""
+  },
+  {
     "guid": "https://www.thefarside.com/2026/11/24/4",
     "image": "https://featureassets.amuniversal.com/assets/e8411800fa840137d52f005056a9545d",
     "link": "https://www.thefarside.com/2026/11/24/4",
@@ -663,40 +698,5 @@
     "link": "https://www.thefarside.com/2026/11/02/2",
     "published": "2026-11-02T12:02:00.000Z",
     "title": "\"Coincidence, ladies and gentlemen? Coincidence that my client just happened to live across from the A-1 Mask Co., just happened to walk by their office windows each day, and they, in turn, just happened to stumble across this new design?\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/11/02/1",
-    "image": "https://featureassets.amuniversal.com/assets/6f065d20fa850137d52f005056a9545d",
-    "link": "https://www.thefarside.com/2026/11/02/1",
-    "published": "2026-11-02T12:01:00.000Z",
-    "title": "No caption 2026-11-02-1"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/11/02/0",
-    "image": "https://featureassets.amuniversal.com/assets/961a0620dcca0137caaf005056a9545d",
-    "link": "https://www.thefarside.com/2026/11/02/0",
-    "published": "2026-11-02T12:00:00.000Z",
-    "title": "In God's kitchen"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/11/01/1",
-    "image": "https://featureassets.amuniversal.com/assets/8a9d14a0cdd20137c56b005056a9545d",
-    "link": "https://www.thefarside.com/2026/11/01/1",
-    "published": "2026-11-01T12:01:00.000Z",
-    "title": "\"‘H,' please for both of us.\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/11/01/0",
-    "image": "https://featureassets.amuniversal.com/assets/a6325210fa850137d52f005056a9545d",
-    "link": "https://www.thefarside.com/2026/11/01/0",
-    "published": "2026-11-01T12:00:00.000Z",
-    "title": "Kids' shows that bombed"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/10/28/4",
-    "image": "https://featureassets.amuniversal.com/assets/650cc0e0cdd20137c56b005056a9545d",
-    "link": "https://www.thefarside.com/2026/10/28/4",
-    "published": "2026-10-28T12:04:00.000Z",
-    "title": "\"Next!\""
   }
 ]
