@@ -1,5 +1,40 @@
 [
   {
+    "guid": "https://www.thefarside.com/2026/11/26/4",
+    "image": "https://featureassets.amuniversal.com/assets/42105420cdd50137c56b005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/26/4",
+    "published": "2026-11-26T12:04:00.000Z",
+    "title": "\"I can't believe this! Can't anyone here get the lid off the mayonnaise?\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/26/3",
+    "image": "https://featureassets.amuniversal.com/assets/ded262b0d7410137c8a6005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/26/3",
+    "published": "2026-11-26T12:03:00.000Z",
+    "title": "\"Okay, everyone, dig in and you kids watch for stingers.\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/26/2",
+    "image": "https://featureassets.amuniversal.com/assets/7d56bca0fa850137d52f005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/26/2",
+    "published": "2026-11-26T12:02:00.000Z",
+    "title": "\"Hey! I'm trying to pass the potatoes! Remember, my forearms are just as useless as yours!\""
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/26/1",
+    "image": "https://featureassets.amuniversal.com/assets/feb12370e3ae0137cd49005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/26/1",
+    "published": "2026-11-26T12:01:00.000Z",
+    "title": "Helen paused. With an audible \"wumph,\" Muffy's familiar yipping had ended, and only the sounds of Ed's football game now emanated from the living room."
+  },
+  {
+    "guid": "https://www.thefarside.com/2026/11/26/0",
+    "image": "https://featureassets.amuniversal.com/assets/f4216700e8590137cedf005056a9545d",
+    "link": "https://www.thefarside.com/2026/11/26/0",
+    "published": "2026-11-26T12:00:00.000Z",
+    "title": "\"I'm afraid it's bad news, Mr. Griswold. The lab results indicate your body cavity is stuffed with a tasty, breadlike substance.\""
+  },
+  {
     "guid": "https://www.thefarside.com/2026/11/25/4",
     "image": "https://featureassets.amuniversal.com/assets/ee45a86758c311ea8bf6005056a9",
     "link": "https://www.thefarside.com/2026/11/25/4",
@@ -663,40 +698,5 @@
     "link": "https://www.thefarside.com/2026/11/03/2",
     "published": "2026-11-03T12:02:00.000Z",
     "title": "\"Just a word of warning, Myron if you miss, I'm comin' after your big hazel.\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/11/03/1",
-    "image": "https://featureassets.amuniversal.com/assets/5e4868c0e92f0137cf47005056a9545d",
-    "link": "https://www.thefarside.com/2026/11/03/1",
-    "published": "2026-11-03T12:01:00.000Z",
-    "title": "\"Now, moving on from the so-called funny bone, we come to this little guy and you tickle him at your own peril.\""
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/11/03/0",
-    "image": "https://featureassets.amuniversal.com/assets/8057a8d0e92d0137cf47005056a9545d",
-    "link": "https://www.thefarside.com/2026/11/03/0",
-    "published": "2026-11-03T12:00:00.000Z",
-    "title": "In the corridors of Clowngress"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/11/02/4",
-    "image": "https://featureassets.amuniversal.com/assets/936c0330cdd50137c56b005056a9545d",
-    "link": "https://www.thefarside.com/2026/11/02/4",
-    "published": "2026-11-02T12:04:00.000Z",
-    "title": "No caption 2026-11-02-4"
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/11/02/3",
-    "image": "https://featureassets.amuniversal.com/assets/0a652650df120137cbaf005056a9545d",
-    "link": "https://www.thefarside.com/2026/11/02/3",
-    "published": "2026-11-02T12:03:00.000Z",
-    "title": "Early chemists describe the first dirt molecule."
-  },
-  {
-    "guid": "https://www.thefarside.com/2026/11/02/2",
-    "image": "https://featureassets.amuniversal.com/assets/cae46420df100137cbaf005056a9545d",
-    "link": "https://www.thefarside.com/2026/11/02/2",
-    "published": "2026-11-02T12:02:00.000Z",
-    "title": "\"Coincidence, ladies and gentlemen? Coincidence that my client just happened to live across from the A-1 Mask Co., just happened to walk by their office windows each day, and they, in turn, just happened to stumble across this new design?\""
   }
 ]
